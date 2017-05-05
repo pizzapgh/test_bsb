@@ -1,0 +1,110 @@
+---
+---
+
+$primary: #300030;
+$secondary: #F07241;
+$light: #b1b1b1;
+$dark: #313131;
+$headline: 'Fjalla One', Arial, sans-serif;
+$body: 'Source Sans Pro', Arial, sans-serif;
+
+/* Resets */
+
+body {
+	color: $dark;
+	font-family: $body;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+}
+
+h4 {
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+/* Layout */
+
+.container {
+    width: 100%;
+}
+
+.sidebar {
+    background-color: $primary;
+    color: white;
+    float: left;
+    padding: 2%;
+    text-align: center;
+    height: 100%;
+   	position: fixed;
+    width: 20%;
+
+    img {
+    	border: 3px solid $secondary;
+    	border-radius: 100%;
+    	text-align: center;
+    }
+
+    h1 {
+    	font-family: $headline;
+    	font-size: 3em;
+    	text-transform: uppercase;
+    }
+
+    h2 {
+    	font-family: $headline;
+    }
+
+    .fa {
+    	margin-right: 15px;
+    }
+
+    ul {
+    	list-style-type: none;
+    	
+    	li {
+    		text-align: left;
+    		a:link {
+    			color: white;
+    			display: block;
+    			font-family: $body;
+    			padding: 5px;
+    			margin-top: 3px;
+    			text-decoration: none;
+    			text-transform: uppercase;
+    			width: auto;
+    		}
+
+    		a:hover {
+    			color: $secondary;
+    		}
+    	}
+    }
+}
+
+.main-content {
+	float: right;
+    margin-top: 2em;
+    width: 73%;
+
+	h3 {
+		color: $secondary;
+		font-family: $headline;
+		font-size: 2em;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+
+	h4 {
+		color: $light;
+		font-family: $body;
+		font-size: .75em;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+}

@@ -7,3 +7,219 @@ $light: #fff;
 $dark: #232323;
 $headline: 'Knewave', cursive;
 $body: 'Patrick Hand', cursive;
+
+
+body{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  padding: 0;
+  list-style: none;
+}
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-bar{
+  background: url("{{ site.baseurl }}/assets/top-bar.png");
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+.container{
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  max-width: 60%;
+  flex: 0.5;
+}
+ul.menu-mobile {
+    display: flex;
+    flex: 0.7;
+    justify-content: space-between;
+    font-family: $headline;
+}
+ul.menu-mobile li:nth-of-type(1) {
+    display: none;
+}
+ul.menu-mobile li:nth-of-type(3) {
+    display: none;
+}
+.fa-navicon{
+  color: $secondary;
+}
+#toggle{
+  display: none;
+}
+.toggle-navigation-drop{
+  position: absolute;
+  top: 89px;
+  left: 0;
+  right: 0;
+  background: $secondary;
+  display: none;
+}
+#toggle:checked + .toggle-navigation-drop{
+  display: block;
+}
+.top-bar label{
+    margin-left: 2.2rem;
+}
+.toggle-flex{
+  display: flex;
+  margin: auto;
+}
+.toggle-specials{
+  font-family: $headline;
+  margin-right: 1rem;
+  text-align: center;
+}
+.toggle-social{
+display: flex;
+  justify-content: space-around;
+  flex: 0.5;
+  margin: auto;
+}
+.toggle-specials a{
+    color: $light;
+}
+.toggle-social a{
+    color: $dark;
+}
+.box-1{
+  flex:1;
+  background: $primary;
+}
+.box-2{
+  flex: 1;
+  display: flex;
+  background: $secondary;
+  background: url("")
+}
+.social-desktop{
+  display: none;
+}
+.social-desktop a{
+  color: $secondary;
+}
+
+/* site-navigation
+-----------------------*/
+
+
+@media (min-width: 400px){
+  ul.menu-mobile li{
+    font-size: 1.3rem;
+  }
+  .top-bar label{
+    margin-left: 3rem;
+  }
+  .toggle-specials li{
+    font-size: 1.3rem;
+  }
+  .toggle-social .fa-facebook-square,
+  .toggle-social .fa-twitter{
+    font-size: 2.5rem;
+  }
+
+  /* site-navigation
+  -----------------------*/
+
+}
+@media (min-width: 768px){
+  .top-bar{
+    padding: 1rem 2rem;
+  }
+  .toggle-navigation-drop{
+      top: 125px;
+    }
+  ul.menu-mobile li{
+    font-size: 2.5rem;
+  }
+  .fa-2x{
+    font-size: 3rem;
+  }
+  .top-bar label{
+    margin-left: 5.2rem;
+  }
+  [type="checkbox"]:checked + .nested-navigation {
+  top: 109px;
+  }
+  .toggle-specials li{
+    font-size: 2.5rem;
+  }
+  .box-2,
+  .box-1{
+    padding: 1rem 0;
+  }
+  .toggle-social .fa-facebook-square,
+  .toggle-social .fa-twitter{
+    font-size: 4.5rem;
+  }
+
+  /* site-navigation
+  -----------------------*/
+
+}
+@media (min-width: 1024px){
+  .container{
+    width: 800px;
+    margin: auto;
+    }
+  .logo{
+    flex: 0.3;
+  }
+  .top-bar{
+    padding: 1rem 2rem;
+  }
+  ul.menu-mobile{
+    flex: 0.6;
+  }
+  ul.menu-mobile li{
+    font-size: 1.5rem;
+  }
+  ul.menu-mobile li:nth-of-type(1) {
+      display: block;
+  }
+  ul.menu-mobile li:nth-of-type(3) {
+      display: block;
+  }
+  .fa-2x{
+    font-size: 2rem;
+  }
+  .fa-navicon{
+    display: none;
+  }
+  .social-desktop{
+    display: flex;
+    flex: 0.1;
+    justify-content: space-between;
+  }
+  .toggle-navigation-drop{
+    display: none;
+  }
+
+  /* site-navigation
+  -----------------------*/
+
+}
+@media (min-width: 1200px){
+.container{
+  width: 1000px;
+  }
+  ul.menu-mobile li{
+    font-size: 2rem;
+  }
+  .fa-2x{
+    font-size: 2.5rem;
+  }
+
+  /* site-navigation
+  -----------------------*/
+
+}

@@ -73,6 +73,7 @@ ul.menu-mobile li:nth-of-type(3) {
 .toggle-flex{
   display: flex;
   margin: auto;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
 }
 .toggle-specials{
   font-family: $headline;
@@ -99,7 +100,6 @@ display: flex;
   flex: 1;
   display: flex;
   background: $secondary;
-  background: url("")
 }
 .social-desktop{
   display: none;
@@ -111,7 +111,27 @@ display: flex;
 /* site-navigation
 -----------------------*/
 
-
+#home{
+    background: url("{{ site.baseurl }}/assets/home-bg.png");
+    height: 100vh;
+    display: flex;
+}
+.logo-box{
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.logo-box img{
+  width: 200px;
+}
+.fa-chevron-down{
+  display: block;
+  text-align: center;
+  color: #fff;
+  opacity: 0.4;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
 @media (min-width: 400px){
   ul.menu-mobile li{
     font-size: 1.3rem;
@@ -165,6 +185,13 @@ display: flex;
   /* site-navigation
   -----------------------*/
 
+.logo-box img{
+  width: 397px;
+  margin-top: 5rem;
+  }
+  .fa-chevron-down{
+    margin-top: 1.5rem;
+  }
 }
 @media (min-width: 1024px){
   .container{
@@ -189,7 +216,8 @@ display: flex;
   ul.menu-mobile li:nth-of-type(3) {
       display: block;
   }
-  .fa-2x{
+  .social-desktop .fa-facebook-square,
+  .social-desktop .fa-twitter {
     font-size: 2rem;
   }
   .fa-navicon{

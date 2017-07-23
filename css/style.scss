@@ -132,6 +132,36 @@ display: flex;
   font-size: 1.5rem;
   margin-top: 0.5rem;
 }
+
+/* home-slide
+-----------------------*/
+
+.bottom-bar{
+  background: url("{{ site.baseurl }}/assets/bottom-bar.png");
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+.menu-navigation{
+  display: flex;
+  text-align: center;
+  margin: auto;
+  flex: 1;
+  justify-content: space-between;
+}
+.menu-navigation img{
+  width: 40px;
+}
+.menu-navigation span{
+  display: none;
+  font-family: $body;
+  color: $light;
+  margin-left: 1.2rem;
+}
+
 @media (min-width: 400px){
   ul.menu-mobile li{
     font-size: 1.3rem;
@@ -161,9 +191,6 @@ display: flex;
   ul.menu-mobile li{
     font-size: 2.5rem;
   }
-  .fa-2x{
-    font-size: 3rem;
-  }
   .top-bar label{
     margin-left: 5.2rem;
   }
@@ -181,16 +208,32 @@ display: flex;
   .toggle-social .fa-twitter{
     font-size: 4.5rem;
   }
-
+.fa-chevron-down{
+  font-size: 3rem;
+}
   /* site-navigation
   -----------------------*/
 
 .logo-box img{
-  width: 397px;
+  width: 450px;
   margin-top: 5rem;
   }
   .fa-chevron-down{
     margin-top: 1.5rem;
+  }
+
+  /* home-slide
+  -----------------------*/
+
+  .menu-navigation span{
+    display: block;
+  }
+  .menu-navigation li{
+    display: flex;
+      align-items: center;
+    }
+  .bottom-bar{
+    padding: 1rem 2rem;
   }
 }
 @media (min-width: 1024px){
@@ -234,7 +277,11 @@ display: flex;
 
   /* site-navigation
   -----------------------*/
-
+  .bottom-bar{
+    padding:1.5rem 2rem;
+  }
+  /* bottom-bar
+  -----------------------*/
 }
 @media (min-width: 1200px){
 .container{
@@ -243,11 +290,35 @@ display: flex;
   ul.menu-mobile li{
     font-size: 2rem;
   }
-  .fa-2x{
-    font-size: 2.5rem;
-  }
+  .social-desktop .fa-facebook-square, .social-desktop .fa-twitter {
+    font-size: 2.6rem;
+}
+.logo-box img{
+  width: 725px;
+  margin-top: 0;
+}
+.fa-chevron-down{
+  font-size: 3.7rem;
+}
 
   /* site-navigation
   -----------------------*/
+  .menu-navigation img {
+      width: 65px;
+  }
+  .menu-navigation span {
+      font-size: 1.5rem;
+  }
+  /* bottom-bar
+  -----------------------*/
+}
 
+@media (min-width:768px) and (max-height: 768px){
+.logo-box img{
+  margin-top: 4rem;
+  width: 385px;
+  }
+  .fa-chevron-down{
+    font-size: 3rem;
+  }
 }

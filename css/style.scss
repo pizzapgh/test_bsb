@@ -8,6 +8,10 @@ $dark: #232323;
 $headline: 'Knewave', cursive;
 $body: 'Patrick Hand', cursive;
 
+html{
+  box-sizing: border-box;
+  line-height: 21px;
+}
 
 body{
   margin: 0;
@@ -28,6 +32,7 @@ a{
   position: fixed;
   left: 0;
   right: 0;
+  z-index: 5;
 }
 .container{
 display: flex;
@@ -58,7 +63,7 @@ ul.menu-mobile li:nth-of-type(3) {
 }
 .toggle-navigation-drop{
   position: absolute;
-  top: 89px;
+  top: 84px;
   left: 0;
   right: 0;
   background: $secondary;
@@ -113,8 +118,11 @@ display: flex;
 
 #home{
     background: url("{{ site.baseurl }}/assets/home-bg.png");
-    height: 100vh;
+    background: #585858;
+    background: url("{{ site.baseurl }}/assets/box-bg-2.png");
+    min-height: 100vh;
     display: flex;
+    width: 100%;
 }
 .logo-box{
   align-items: center;
@@ -162,6 +170,65 @@ display: flex;
   margin-left: 1.2rem;
 }
 
+/* specials-slide
+-----------------------*/
+.specials-box {
+    margin-top: 7rem;
+    text-align: center;
+  }
+  .specials-box h2{
+    font-size: 2rem;
+    font-family: $headline;
+    color: $light;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  .specials-box h3{
+    font-family: $headline;
+    font-size: 1rem;
+    color: $secondary;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+  .specials-box p{
+    font-family: $body;
+    color: $light;
+    font-size: 0.9rem;
+    padding: 0 3rem;
+  }
+.specials-container{
+  position: relative;
+}
+.button-area{
+display: flex;
+margin: auto;
+flex-wrap: wrap;
+justify-content: center;
+}
+.button-area li{
+  background: #f12d2d;
+    width: 220px;
+    height: 48px;
+    margin-bottom: 0.6rem;
+    position: relative;
+    text-align: center;
+    font-family: "Patrick Hand", cursive;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.button-area li:nth-of-type(1){
+  background: #f68a1e;
+}
+.button-area a{
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+}
+.star{
+  display: none;
+}
 @media (min-width: 400px){
   ul.menu-mobile li{
     font-size: 1.3rem;
@@ -179,7 +246,19 @@ display: flex;
 
   /* site-navigation
   -----------------------*/
+  .button-area{
+     width: 425px;
+   }
 
+    /* home-slide
+    -----------------------*/
+
+  .specials-box h2{
+    font-size: 2.5rem;
+  }
+ .specials-box p{
+   padding: 0 4rem;
+ }
 }
 @media (min-width: 768px){
   .top-bar{
@@ -211,6 +290,9 @@ display: flex;
 .fa-chevron-down{
   font-size: 3rem;
 }
+#home{
+    background: url("{{ site.baseurl }}/assets/home-bg.png");
+}
   /* site-navigation
   -----------------------*/
 
@@ -235,6 +317,43 @@ display: flex;
   .bottom-bar{
     padding: 1rem 2rem;
   }
+
+  /* specials-slide
+  -----------------------*/
+.specials-container{
+  margin: 3rem auto;
+  }
+  .specials-box {
+    display: flex;
+    flex-direction: column;
+        background: url("{{ site.baseurl }}/assets/box-bg.png");
+        width: 600px;
+        padding: 2rem;
+    }
+    .specials-box h2{
+      font-size: 3.5rem;
+      margin-top: 0.6rem;
+      margin-bottom: 3rem;
+    }
+    .specials-box h3{
+      font-size: 2rem;
+      margin-top: 0.6rem;
+      margin-bottom: 0.6rem;
+    }
+    .specials-box p{
+      padding: 0 10rem;
+      font-size: 1rem;
+    }
+    .button-area{
+      width: 451px;
+      justify-content: space-between;
+    }
+    .button-area li{
+      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
+      height: 60px;
+    }
+
 }
 @media (min-width: 1024px){
   .container{
@@ -282,6 +401,61 @@ display: flex;
   }
   /* bottom-bar
   -----------------------*/
+
+
+
+  /* specials-slide
+
+
+
+  .specials-container{
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid red;
+    position: relative;
+  }
+  .star{
+    position: absolute;
+    left: -85px;
+    top: 30px;
+    z-index: 0;
+  }
+  .star img{
+    width: 700px;
+  }
+  .specials-box{
+    width: 600px;
+    height: 200px;
+    background: gray;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    top: 200px;
+  }
+
+
+
+
+  -----------------------*/
+
+  .specials-container{
+    width: 900px;
+    position: relative;
+    }
+    .specials-box{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .star{
+      display: block;
+      position: absolute;
+    left: -245px;
+    top: 0;
+    }
+    .star img{
+      width: 800px;
+    }
 }
 @media (min-width: 1200px){
 .container{
@@ -311,6 +485,41 @@ display: flex;
   }
   /* bottom-bar
   -----------------------*/
+/* bottom-bar
+-----------------------*/
+.specials-box{
+  padding: 6rem 6rem 2rem 6rem;
+  top: 28px;
+}
+.specials-box p{
+  font-size: 1.1rem;
+}
+.button-area{
+  margin-bottom: 1rem;
+}
+.specials-box h2{
+  font-size: 7rem;
+  margin-bottom: 5rem;
+}
+}
+
+@media (min-width:1400px){
+  .container{
+    width: 1200px;
+  }
+  .menu-mobile li{
+    font-size: 2.2rem;
+  }
+  .specials-box{
+    top: 48px;
+    right: -230px;
+  }
+  .star{
+    left: -506px;
+  }
+.star img{
+  width: 985px;
+  }
 }
 
 @media (min-width:768px) and (max-height: 768px){
@@ -320,5 +529,31 @@ display: flex;
   }
   .fa-chevron-down{
     font-size: 3rem;
+  }
+  .bottom-bar{
+    padding: 0.5rem;
+  }
+  #home{
+    height: 110vh;
+  }
+  .star{
+    left: -390px;
+  }
+  .star img{
+    width: 750px;
+  }
+  .specials-box{
+    padding: 2rem 6rem 2rem 6rem;
+  }
+  .specials-box h2{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+  .specials-box h3{
+    font-size: 2rem;
+  }
+  .button-area li{
+    font-size: 1rem;
+    height: 50px;
   }
 }

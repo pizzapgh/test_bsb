@@ -28,7 +28,7 @@ a{
 
 .top-bar{
   background: url("{{ site.baseurl }}/assets/top-bar.png");
-  padding: 1rem;
+  padding: 0.1rem 1rem;
   position: fixed;
   left: 0;
   right: 0;
@@ -148,7 +148,7 @@ display: flex;
   background: url("{{ site.baseurl }}/assets/bottom-bar.png");
   position: absolute;
   bottom: 0;
-  padding: 1rem;
+  padding: 0.1rem 1rem;
   position: fixed;
   left: 0;
   right: 0;
@@ -159,6 +159,7 @@ display: flex;
   margin: auto;
   flex: 1;
   justify-content: space-between;
+  align-items: center;
 }
 .menu-navigation img{
   width: 40px;

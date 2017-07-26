@@ -132,14 +132,7 @@ display: flex;
 .logo-box img{
   width: 200px;
 }
-.fa-chevron-down{
-  display: block;
-  text-align: center;
-  color: #fff;
-  opacity: 0.4;
-  font-size: 1.5rem;
-  margin-top: 0.5rem;
-}
+
 
 /* home-slide
 -----------------------*/
@@ -153,6 +146,80 @@ display: flex;
   left: 0;
   right: 0;
 }
+.arrow{
+text-align: center;
+margin: auto;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+bottom: 61px;
+z-index: 6;
+}
+.fa-chevron-down {
+	font-size: 52px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+  color: $light;
+}
+.pulse {
+	animation: pulse 1s linear infinite;
+}
+
+@keyframes "pulse" {
+ 0% {
+   	transform: scale(1.1);
+ }
+ 50% {
+   	transform: scale(0.8);
+ }
+ 100% {
+   	transform: scale(1);
+ }
+
+}
+
+@-moz-keyframes pulse {
+ 0% {
+   transform: scale(1.1);
+ }
+ 50% {
+   transform: scale(0.8);
+ }
+ 100% {
+   transform: scale(1);
+ }
+
+}
+
+@-webkit-keyframes "pulse" {
+ 0% {
+   transform: scale(1.1);
+ }
+ 50% {
+   transform: scale(0.8);
+ }
+ 100% {
+   transform: scale(1);
+ }
+
+}
+
+@-ms-keyframes "pulse" {
+ 0% {
+   transform: scale(1.1);
+ }
+ 50% {
+   transform: scale(0.8);
+ }
+ 100% {
+   transform: scale(1);
+ }
+
+}
+
 .menu-navigation{
   display: flex;
   text-align: center;
@@ -300,9 +367,6 @@ width: 302px;
   .toggle-social .fa-twitter{
     font-size: 4.5rem;
   }
-.fa-chevron-down{
-  font-size: 3rem;
-}
 #home{
     background: url("{{ site.baseurl }}/assets/home-bg.png");
 }
@@ -312,9 +376,6 @@ width: 302px;
 .logo-box img{
   width: 450px;
   margin-top: 5rem;
-  }
-  .fa-chevron-down{
-    margin-top: 1.5rem;
   }
 
   /* home-slide
@@ -473,9 +534,7 @@ width: 302px;
     }
 }
 @media (min-width: 1200px){
-.fa-chevron-down{
-  font-size: 3.7rem;
-}
+
 
   /* site-navigation
   -----------------------*/
@@ -488,9 +547,6 @@ width: 302px;
 .logo-box img{
   margin-top: 4rem;
   width: 385px;
-  }
-  .fa-chevron-down{
-    font-size: 3rem;
   }
   .bottom-bar{
     padding: 0.5rem;
@@ -564,5 +620,11 @@ width: 302px;
   }
 .star img{
   width: 925px;
+  }
+  .arrow{
+  bottom: 58px;
+  }
+  .fa-chevron-down {
+  	font-size: 85px;
   }
 }

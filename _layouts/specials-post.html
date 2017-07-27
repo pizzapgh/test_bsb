@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<header class="specials grit-3" >
+  <div class="specials-container">
+
+    <div class="star">
+      <img src="{{ "/assets/star.png" | prepend: site.baseurl }}"alt="">
+    </div>
+
+
+    <div class="specials-box grit-2">
+      <h2>Specials</h2>
+      <ul class="button-area">
+        {% for fart in site.categories.specials-collect %}
+        <li><a href="{{ site.baseurl }}{{ fart.url }}">{{fart.title}}</a></li>
+        {% endfor %}
+      </ul>
+        {{ content }}
+    </div>
+    <div class="pulse arrow">
+      <i class="fa fa-chevron-down fa-2x"></i>
+    </div>
+
+  </div>
+
+</header>

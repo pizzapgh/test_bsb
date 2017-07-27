@@ -1,13 +1,13 @@
-<nav class="top-bar">
+<nav class="top-bar grit">
   <div class="container">
     <div class="logo">
-    <img class="logo" src="{{ "/assets/logo.png" | prepend: site.baseurl }}" atl="logo">
+    <a href="{{site.baseurl}}/index.html"><img class="logo" src="{{ "/assets/logo.png" | prepend: site.baseurl }}" atl="logo"></a>
     </div>
 
     <ul class="menu-mobile">
-      <li><a href="#">Home</a></li>
+      <li><a href="{{site.baseurl}}/index.html"}>Home</a></li>
       <li><a href="#">Menu</a></li>
-      <li><a href="#">Specials</a></li>
+      <li><a href="{{site.baseurl}}/specials-page.html">Specials</a></li>
       <li><a href="#">Locations</a></li>
     </ul>
 
@@ -20,7 +20,7 @@
        <div class="toggle-flex">
          <div class="box-1">
            <ul class="toggle-specials">
-             <li><a href="#">Specials</a></li>
+             <li><a href="{{site.baseurl}}/specials-page.html">Specials</a></li>
            </ul>
          </div>
          <div class="box-2">

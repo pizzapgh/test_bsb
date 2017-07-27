@@ -2,8 +2,12 @@
 layout: default
 ---
 
-<header id="home">
-      {% include site-navigation.html %}
-      {% include specials-slide.html %}
-      {% include menu-navigation.html %}
+<header class="home grit-4">
+  <div class="logo-box">
+  <img src="{{ "/assets/logo-home.png" | prepend: site.baseurl }}"alt="">
+  <div class="pulse arrow">
+    <i class="fa fa-chevron-down fa-2x"></i>
+  </div>
+  </div>
+
 </header>

@@ -7,12 +7,12 @@
          <link href="https://fonts.googleapis.com/css?family=Knewave|Patrick+Hand" rel="stylesheet">
          <script src="https://use.fontawesome.com/d7c2c686b6.js"></script>
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-         <link rel="stylesheet" href="css/style.css" type="text/css">
+         <link rel="stylesheet" href="{{ site.url }}/css/style.css" type="text/css">
     </head>
 
     <body>
-
+          {% include site-navigation.html %}
             {{content}}
-
+          {% include menu-navigation.html %}
     </body>
 </html>

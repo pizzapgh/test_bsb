@@ -1,0 +1,11 @@
+---
+layout: specials-post
+title:  "Valentines Day Special"
+date:   2014-05-12 20:59:39 -0500
+meta: All you can eat wings!
+category: specials-collect
+---
+
+### Debate Special
+Take advantage of the following specials, valid SATURDAY only (2/14/15)
+13 Wings (Any Flavor) and a salad for only 17.99!

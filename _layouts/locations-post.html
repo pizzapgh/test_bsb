@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<header class="locations grit-3" >
+  <div class="specials-container">
+
+    <div class="specials-box locations-box grit-2">
+      <h2>Locations</h2>
+      <ul class="button-area">
+        {% for fart in site.categories.locations-collect %}
+        <li><a href="{{ site.baseurl }}{{ fart.url }}">{{fart.title}}</a></li>
+        {% endfor %}
+      </ul>
+      <div class="location-info">
+        {{ content }}
+      </div>
+    </div>
+    <div class="pulse arrow">
+      <i class="fa fa-chevron-down fa-2x"></i>
+    </div>
+
+  </div>
+
+</header>

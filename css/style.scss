@@ -25,7 +25,13 @@ a{
   color: #fff;
   text-decoration: none;
 }
-
+.button-area a {
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+}
 .top-bar{
   background-color: $dark;
   padding: 0.1rem 1rem;
@@ -142,6 +148,12 @@ display: flex;
     width: 100%;
 }
 .specials{
+background: url("{{ site.baseurl }}/assets/box-bg-2.png");
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+}
+.locations{
 background: url("{{ site.baseurl }}/assets/box-bg-2.png");
     min-height: 100vh;
     display: flex;
@@ -266,6 +278,13 @@ z-index: 6;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
   }
+  .locations h2{
+    font-size: 2rem;
+    font-family: $headline;
+    color: $light;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
   .specials-box h3{
     font-family: $headline;
     font-size: 1rem;
@@ -282,6 +301,7 @@ z-index: 6;
 .specials-container{
   position: relative;
   margin: 2rem auto;
+  width: 100%;
 }
 .button-area{
 display: flex;
@@ -312,6 +332,39 @@ width: 90%;
 .star{
   display: none;
 }
+/* location-slide
+-----------------------*/
+.location-info{
+  display: flex;
+  justify-content: space-between;
+  width: 83%;
+  margin: auto;
+}
+.info h3{
+  font-size: 1rem;
+  color: $light;
+}
+.fa-map-marker{
+  color: $secondary;
+  font-size: 3rem;
+}
+.fa-clock-o{
+  color: $secondary;
+    font-size: 3rem;
+}
+.hours{
+  font-family: $body;
+  color: $light;
+}
+.box-3{
+  flex: 0.8;
+}
+.info p{
+  padding: 0;
+}
+.button-area li a{
+  display: block;
+}
 @media (min-width: 400px){
   ul.menu-mobile li{
     font-size: 1.3rem;
@@ -335,15 +388,27 @@ width: 90%;
   .button-area li{
     font-size: 0.9rem;
   }
+
     /* home-slide
     -----------------------*/
 
   .specials-box h2{
     font-size: 2.5rem;
   }
+  .locations-box h2{
+    font-size: 2.5rem;
+  }
  .specials-box p{
    padding: 0 4rem;
  }
+ .box-4{
+   flex: 0.8;
+   align-items: center;
+ }
+.info p{
+  padding: 0;
+  margin-bottom: 0;
+}
 }
 @media (min-width: 768px){
   .fa-navicon{
@@ -389,6 +454,9 @@ width: 90%;
 .specials{
     background: $primary;
 }
+.locations{
+    background: $primary;
+}
 .grit-3{
     background-image: url("{{site.baseurl}}/assets/trexture-2.png");
 
@@ -429,10 +497,27 @@ width: 90%;
     padding: 2rem 0;
     margin-top: 4.5rem;
     }
+
+    /* location-slide
+    -----------------------*/
+
+    .locations-box {
+      display: flex;
+      flex-direction: column;
+      background-color: $dark;
+      width: 600px;
+      padding: 2rem 0;
+      margin-top: 4.5rem;
+      }
     .grit-4{
       background-image: url("{{site.baseurl}}/assets/trexture-2.png");
     }
     .specials-box h2{
+      font-size: 4rem;
+      margin-top: 0.6rem;
+      margin-bottom: 3rem;
+    }
+    .locations-box h2{
       font-size: 4rem;
       margin-top: 0.6rem;
       margin-bottom: 3rem;
@@ -456,7 +541,36 @@ width: 90%;
       font-size: 1.1rem;
       height: 60px;
     }
-
+    .location-info{
+      display: flex;
+      align-items: center;
+        width: 65%;
+    }
+    .info p{
+      padding: 0;
+      margin: 0;
+    }
+.box-3{
+  display: flex;
+  text-align: left;
+  align-items: center;
+  }
+  .box-4{
+    display: flex;
+    flex: none;
+text-align: left;
+align-items: center;
+  }
+  .fa-map-marker{
+    margin-right: 1rem;
+    font-size: 4rem;
+  }
+  .fa-clock-o{
+    margin-right: 1rem;
+  }
+  .info h3{
+    font-size: 1rem;
+  }
 }
 @media (min-width: 1024px){
   .button-area a{
@@ -523,6 +637,12 @@ width: 90%;
       top: 0;
       box-shadow: 0 2px 45px rgba(0,0,0,1);
     }
+    .locations-box{
+      position: absolute;
+      left: -100px;
+      top: 0;
+      box-shadow: 0 2px 45px rgba(0,0,0,1);
+    }
     .star{
       display: block;
       position: absolute;
@@ -531,6 +651,9 @@ width: 90%;
     }
     .star img{
       width: 730px;
+    }
+    .info h3{
+      font-size: 1.2rem;
     }
 }
 @media (min-width: 1200px){
@@ -568,6 +691,10 @@ width: 90%;
     font-size: 4rem;
     margin-bottom: 3rem;
   }
+  .locations-box h2{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
   .specials-box h3{
     font-size: 1.3rem;
   }
@@ -580,6 +707,9 @@ width: 90%;
   }
   .home .arrow{
     bottom: 105px;
+  }
+  .info h3{
+    font-size: 1.2rem;
   }
 }
 
@@ -612,11 +742,15 @@ width: 90%;
   .specials-box{
     top: 48px;
     right: -220px;
-    padding: 4.5rem 4rem 2rem 4rem;
+    padding: 4.5rem 4rem 4.5rem 4rem;
   }
   .specials-box h2{
   font-size: 7rem;
   margin-bottom: 4.7rem;
+}
+.locations-box h2{
+font-size: 7rem;
+margin-bottom: 4.7rem;
 }
   .star{
     left: -466px;

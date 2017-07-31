@@ -1,6 +1,6 @@
 ---
 layout: locations-post
-title:  "Avalon"
+title:  "Aliquippa"
 date:   2014-05-12 20:59:39 -0500
 category: locations-collect
 ---
@@ -9,8 +9,8 @@ category: locations-collect
 <i class="fa fa-map-marker fa-4x"></i>
 
   <div class="info">
-  <h3 class="number">412-761-7468</h3>
-  <p>344 Union Avenue Pittsburgh, PA 15202</p>
+  <h3 class="number">412-378-3083</h3>
+  <p>1125 Franklin Avenue, Aliquippa, PA 15001</p>
   </div>
 </div>
 

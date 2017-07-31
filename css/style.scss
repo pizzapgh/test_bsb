@@ -17,21 +17,32 @@ body{
   margin: 0;
   padding: 0;
 }
+#map{
+  display: none;
+}
+.locations-button-area a{
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  left: 10%;
+  right: 10%;
+}
+.specials-button-area a{
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+}
 ul{
   padding: 0;
   list-style: none;
 }
-a{
+li a{
   color: #fff;
   text-decoration: none;
 }
-.button-area a {
-    position: absolute;
-    top: 25%;
-    bottom: 25%;
-    left: 10%;
-    right: 10%;
-}
+
 .top-bar{
   background-color: $dark;
   padding: 0.1rem 1rem;
@@ -303,6 +314,10 @@ display: none;
   position: relative;
   margin: 2rem auto;
 }
+.locations-container{
+  position: relative;
+  margin: 2rem auto;
+}
 .button-area{
 display: flex;
 margin: auto;
@@ -338,7 +353,7 @@ width: 90%;
   display: flex;
   justify-content: space-between;
   width: 83%;
-  margin: auto;
+  margin: 1.5rem auto;
 }
 .info h3{
   font-size: 1rem;
@@ -346,11 +361,11 @@ width: 90%;
 }
 .fa-map-marker{
   color: $secondary;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .fa-clock-o{
   color: $secondary;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .hours{
   font-family: $body;
@@ -465,7 +480,9 @@ width: 90%;
     background-image: url("{{site.baseurl}}/assets/trexture-2.png");
 
 }
-
+.location-info{
+  margin: 0 auto;
+}
   /* site-navigation
   -----------------------*/
 
@@ -492,6 +509,9 @@ width: 90%;
   -----------------------*/
 .specials-container{
   margin: 3rem auto;
+  }
+  .locations-container{
+    margin: 3rem auto;
   }
   .specials-box {
     display: flex;
@@ -567,30 +587,40 @@ align-items: center;
   }
   .fa-map-marker{
     margin-right: 1rem;
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .fa-clock-o{
     margin-right: 1rem;
+    font-size: 3.5rem
   }
+
   .info h3{
     font-size: 1rem;
   }
 }
 @media (min-width: 1024px){
-  .locations-button-area a{
-    position: absolute;
-    top: 25%;
-    bottom: 25%;
-    left: 10%;
-    right: 10%;
+  #map{
+    display: block;
   }
-.specials-button-area a{
-    position: absolute;
-    top: 10%;
-    bottom: 10%;
-    left: 10%;
-    right: 10%;
+  .locations{
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
   }
+  .locations-container{
+    width: 532px;
+position: relative;
+  }
+  #map{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    }
+
   .container{
     width: 800px;
     margin: auto;
@@ -650,7 +680,7 @@ align-items: center;
     }
     .locations-box{
       position: absolute;
-      left: -100px;
+      left: -200px;
       top: 0;
       box-shadow: 0 2px 45px rgba(0,0,0,1);
     }
@@ -664,7 +694,7 @@ align-items: center;
       width: 730px;
     }
     .info h3{
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 }
 @media (min-width: 1200px){
@@ -720,7 +750,7 @@ align-items: center;
     bottom: 105px;
   }
   .info h3{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -755,13 +785,19 @@ align-items: center;
     right: -220px;
     padding: 4.5rem 4rem 4rem 4rem;
   }
+  .locations-box{
+    position: absolute;
+    left: -500px;
+    top: 28px;
+    box-shadow: 0 2px 45px rgba(0,0,0,1);
+  }
   .specials-box h2{
-  font-size: 7rem;
-  margin-bottom: 4.7rem;
+  font-size: 5.7rem;
+  margin-bottom: 3.8rem;
 }
 .locations-box h2{
-font-size: 6rem;
-margin-bottom: 4.2rem;
+font-size: 5rem;
+margin-bottom: 3.5rem;
 }
   .star{
     left: -466px;
@@ -777,5 +813,10 @@ margin-bottom: 4.2rem;
   }
   .fa-chevron-down {
   	font-size: 85px;
+  }
+  .locations-container{
+    width: 332px;
+position: relative;
+margin-top: 4.5rem
   }
 }

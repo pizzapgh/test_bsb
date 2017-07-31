@@ -9,8 +9,8 @@ category: locations-collect
 <i class="fa fa-map-marker fa-4x"></i>
 
   <div class="info">
-  <h3 class="number">412-269-7468</h3>
-  <p>1534 5th Avenue, Coraopolis, PA 15108</p>
+  <h3 class="number">412-381-7468</h3>
+  <p>1324 E. Carson St Pittsburgh, PA 15203</p>
   </div>
 </div>
 

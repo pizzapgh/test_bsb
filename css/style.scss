@@ -17,8 +17,19 @@ body{
   margin: 0;
   padding: 0;
 }
+nav.sticky {
+  position: fixed !important;
+  top:53px;
+}
 #map{
   display: none;
+}
+.menu{
+  height: 1500px;
+}
+header{
+  position: relative;
+  overflow: hidden;
 }
 .locations-button-area a{
   position: absolute;
@@ -45,20 +56,21 @@ li a{
 
 .top-bar{
   background-color: $dark;
-  padding: 0.1rem 1rem;
   position: fixed;
   left: 0;
   right: 0;
   z-index: 5;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
 }
 .bottom-bar{
   background: $dark;
-  position: absolute;
+  position: absolute !important;
   bottom: 0;
   padding: 0.1rem 1rem;
-  position: fixed;
   left: 0;
   right: 0;
+  height: 48px;
+  display: flex;
 }
 
 .grit-2{
@@ -73,6 +85,8 @@ li a{
 display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 90%;
+  margin: auto;
 }
 .logo{
   max-width: 60%;
@@ -193,7 +207,7 @@ margin-right: auto;
 left: 0;
 right: 0;
 bottom: 61px;
-z-index: 6;
+z-index: 2;
 display: none;
 }
 .fa-chevron-down {
@@ -426,6 +440,9 @@ width: 90%;
 }
 }
 @media (min-width: 768px){
+  nav.sticky{
+    top: 66px;
+  }
   .arrow{
     display: block;
   }
@@ -503,6 +520,7 @@ width: 90%;
     }
   .bottom-bar{
     padding: 1rem 2rem;
+    height: 10vh;
   }
 
   /* specials-slide
@@ -599,16 +617,11 @@ align-items: center;
   }
 }
 @media (min-width: 1024px){
+
   #map{
     display: block;
   }
-  .locations{
-position: absolute;
-left: 0;
-right: 0;
-top: 0;
-bottom: 0;
-  }
+
   .locations-container{
     width: 532px;
 position: relative;
@@ -712,11 +725,12 @@ position: relative;
   margin-top: -1.5rem;
   width: 460px;
   }
-  .bottom-bar{
-    padding: 0.5rem;
+  .top-bar{
+    padding: 0.2rem 2rem;
   }
-  .home{
-    height: 110vh;
+  .bottom-bar{
+    padding: 0.5rem 0 0.9rem 0;
+    height: 35px;
   }
   .star{
     left: -240px;
@@ -727,10 +741,14 @@ position: relative;
   .specials-box{
     right: -30px;
     padding: 2rem 0 1rem;
+    margin-top: 3.3rem;
   }
   .specials-box h2{
     font-size: 4rem;
     margin-bottom: 3rem;
+  }
+  .locations-box{
+    margin-top: 3.3rem;
   }
   .locations-box h2{
     font-size: 4rem;
@@ -746,6 +764,9 @@ position: relative;
     font-size: 1rem;
     height: 50px;
   }
+  .arrow{
+    bottom: 24px;
+  }
   .home .arrow{
     bottom: 105px;
   }
@@ -755,6 +776,9 @@ position: relative;
 }
 
 @media (min-width:1400px){
+  nav.sticky{
+    top: 115px;
+  }
   .menu-navigation img {
       width: 65px;
   }
@@ -809,10 +833,13 @@ margin-bottom: 3.5rem;
   bottom: 145px;
   }
   .specials .arrow{
-    bottom: 58px;
+    bottom: 78px;
+  }
+  .locations .arrow{
+    bottom: 78px;
   }
   .fa-chevron-down {
-  	font-size: 85px;
+  	font-size: 65px;
   }
   .locations-container{
     width: 332px;

@@ -3,6 +3,8 @@ layout: default
 ---
 
 <header class="locations" >
+    {% include site-navigation.html %}
+
   <div id="map"></div>
   <div class="locations-container">
     <div class="specials-box locations-box grit-2">
@@ -21,5 +23,9 @@ layout: default
     </div>
 
   </div>
-
+      {% include menu-navigation.html %}
 </header>
+
+<article class="menu">
+      {% include menu.html %}
+</article>

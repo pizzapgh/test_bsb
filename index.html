@@ -3,11 +3,16 @@ layout: default
 ---
 
 <header class="home grit-4">
+    {% include site-navigation.html %}
   <div class="logo-box">
   <img src="{{ "/assets/logo-home.png" | prepend: site.baseurl }}"alt="">
   <div class="pulse arrow">
     <i class="fa fa-chevron-down fa-2x"></i>
   </div>
   </div>
-
+{% include menu-navigation.html %}
 </header>
+
+<article class="menu">
+      {% include menu.html %}
+</article>

@@ -31,17 +31,11 @@ header{
   position: relative;
   overflow: hidden;
 }
-.locations-button-area a{
+.locations-button-area a,
+.specials-button-area a{
   position: absolute;
   top: 25%;
   bottom: 25%;
-  left: 10%;
-  right: 10%;
-}
-.specials-button-area a{
-  position: absolute;
-  top: 10%;
-  bottom: 10%;
   left: 10%;
   right: 10%;
 }
@@ -343,7 +337,7 @@ width: 90%;
 .button-area li{
   background: #f12d2d;
     width: 48.8%;
-    height: 50px;
+    height: 40px;
     margin-bottom: 0.6rem;
     position: relative;
     text-align: center;
@@ -581,7 +575,7 @@ width: 90%;
     .button-area li{
       margin-bottom: 0.6rem;
       font-size: 1.1rem;
-      height: 60px;
+      height: 45px;
     }
     .location-info{
       display: flex;
@@ -762,7 +756,7 @@ position: relative;
   }
   .button-area li{
     font-size: 1rem;
-    height: 50px;
+    height: 40px;
   }
   .arrow{
     bottom: 24px;
@@ -795,7 +789,7 @@ position: relative;
     font-size: 2.6rem;
 }
 .logo-box img{
-  width: 700px;
+  width: 750px;
   margin-top: 50px;
 }
   .container{

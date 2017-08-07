@@ -1,6 +1,6 @@
 ---
 layout: specials-post
-title:  "Carnegie Special, Today Only 7/22/15"
+title:  "Carnegie Special"
 date:   2014-05-12 20:59:39 -0500
 meta: All you can eat wings!
 category: specials-collect

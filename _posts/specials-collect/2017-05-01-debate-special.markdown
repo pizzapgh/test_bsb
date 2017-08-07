@@ -1,6 +1,6 @@
 ---
 layout: specials-post
-title:  "Debate Special, 9/26/16"
+title:  "Debate Special"
 date:   2014-05-12 20:59:39 -0500
 meta: All you can eat wings!
 category: specials-collect

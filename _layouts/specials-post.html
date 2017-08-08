@@ -29,16 +29,7 @@ layout: default
 
   </div>
 
-  <nav class="bottom-bar grit-2">
-    <div class="container">
-      <ul class="menu-navigation">
-        <li><a href="#"><img src="{{ "/assets/wing-icon.png" | prepend: site.baseurl }}" atl="logo"></a><span>Wings</span></li>
-  <li><a href="#"><img src="{{ "/assets/salad-icon.png" | prepend: site.baseurl }}" atl="logo"></a><span>Salads</span></li>
-  <li><a href="#"><img src="{{ "/assets/burger-icon.png" | prepend: site.baseurl }}" atl="logo"></a><span>Sandwiches</span></li>
-  <li><a href="#"><img src="{{ "/assets/fries-icon.png" | prepend: site.baseurl }}" atl="logo"></a><span>Sides</span></li>
-      </ul>
-    </div>
-  </nav>
+  {% include menu-navigation.html %}
 
 </header>
 

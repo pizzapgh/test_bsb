@@ -22,7 +22,7 @@ $(document).ready(function(){
       if( y > ninetypercent) {
 
         // Add the "sticky" class
-        $('.bottom-bar').addClass('sticky');
+        $('.bottom-bar').addClass('sticky').addClass('grit');
       } else {
         // Else remove it.
         $('.bottom-bar').removeClass('sticky');

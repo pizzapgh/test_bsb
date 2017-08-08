@@ -4,7 +4,8 @@
 $primary: #f12d2d;
 $secondary: #f68a1e;
 $light: #fff;
-$dark: #232323;
+$dark: #1d1d1d;
+$dark-gray: #232323;
 $headline: 'Knewave', cursive;
 $body: 'Patrick Hand', cursive;
 
@@ -20,12 +21,17 @@ body{
 nav.sticky {
   position: fixed !important;
   top:53px;
+  z-index: 4;
+  background-image: url("{{site.baseurl}}/assets/sticky-nav-bg.png") !important;
 }
 #map{
   display: none;
 }
-.menu{
-  height: 1500px;
+.menu:before{
+  content: "";
+  display: table;
+  background: blue;
+  height: 20px;
 }
 header{
   position: relative;
@@ -54,7 +60,7 @@ li a{
   left: 0;
   right: 0;
   z-index: 5;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8);
 }
 .bottom-bar{
   background: $dark;
@@ -72,7 +78,7 @@ li a{
 
 }
 .grit{
-    background-image: url("{{site.baseurl}}/assets/trexture.png");
+    background-image: url("{{site.baseurl}}/assets/trexture.png") !important;
 
 }
 .container{
@@ -388,6 +394,114 @@ width: 90%;
 .button-area li a{
   display: block;
 }
+
+  /* menu
+  -----------------------*/
+.menu{
+  background: $dark-gray;
+}
+.wing-box img{
+  width: 100%;
+}
+.menu-container{
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+.menu h2{
+  font-size: 2rem;
+  font-family: $headline;
+  color: $light;
+  margin-bottom: 3.5rem;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+.price{
+  position: absolute;
+  right: 0;
+  top: -2px;
+}
+.menu h4{
+  position: relative;
+  font-family: $headline;
+  color: $secondary;
+}
+span.dots{
+  margin: 0;
+border: 0;
+height: 15px;
+display: block;
+background-image: radial-gradient(circle closest-side, #f12d2d 99%, transparent 0);
+background-position: bottom;
+background-size: 6px 5px;
+background-repeat: repeat-x;
+margin-top: 1rem;
+}
+span.food-item-dots{
+  margin: 0;
+border: 0;
+height: 15px;
+display: block;
+background-image: radial-gradient(circle closest-side, #f12d2d 99%, transparent 0);
+background-position: bottom;
+background-size: 6px 5px;
+background-repeat: repeat-x;
+}
+.price,
+.cents,
+.dollar-sign{
+font-family: $body;
+color: $light;
+}
+.price{
+  font-size: 1.7rem;
+}
+.cents{
+  vertical-align: super;
+  font-size: 0.8rem;
+  margin-left: 0.2rem;
+}
+.dollar-sign{
+  vertical-align: super;
+  font-size: 1rem;
+  margin-right: 0.2rem;
+}
+.menu h5{
+  text-align: center;
+  font-family: $body;
+  color: $light;
+  background: $primary;
+  padding: 0.2rem 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.food-item-description{
+  font-family: $body;
+  color: $light;
+  text-transform: capitalize;
+}
+.hot{
+  position: absolute;
+  right: 4px;
+  top: 6px;
+}
+.wings img{
+    width: 30px;
+}
+.food-item-description{
+  font-family: "Patrick Hand", cursive;
+color: #fff;
+text-transform: capitalize;
+font-size: 0.8rem;
+line-height: 28px;
+}
+span.food-item-dots{
+  margin-top: 1rem;
+}
+.smaller{
+  font-size: 1.2rem !important;
+}
 @media (min-width: 400px){
   ul.menu-mobile li{
     font-size: 1.3rem;
@@ -431,14 +545,19 @@ width: 90%;
 .info p{
   padding: 0;
   margin-bottom: 0;
+  }
 }
-}
+
 @media (min-width: 768px){
+  .smaller{
+    font-size: 2.8rem !important;
+  }
   nav.sticky{
-    top: 66px;
+    top: 92px;
   }
   .arrow{
     display: block;
+    bottom: 130px;
   }
 
   .fa-navicon{
@@ -498,8 +617,8 @@ width: 90%;
   -----------------------*/
 
 .logo-box img{
-  width: 450px;
-  margin-top: 5rem;
+  width: 455px;
+  margin-top: 1rem;
   }
 
   /* home-slide
@@ -514,7 +633,6 @@ width: 90%;
     }
   .bottom-bar{
     padding: 1rem 2rem;
-    height: 10vh;
   }
 
   /* specials-slide
@@ -609,9 +727,54 @@ align-items: center;
   .info h3{
     font-size: 1rem;
   }
+  .wings-pic-price{
+    display: flex;
+    align-items: center;
+  }
+  .wing-box{
+    flex: 1;
+  }
+  .wing-price{
+    flex: 1;
+  }
+  .wing-box img{
+    width: 90%;
+  }
+  .menu h5{
+    padding: 0.5rem 0;
+  }
+  .menu h2{
+    font-size: 2.9rem;
+  }
+  span.dots{
+    margin: 0;
+border: 0;
+height: 15px;
+display: block;
+background-image: radial-gradient(circle closest-side, #f12d2d 99%, transparent 0);
+background-position: bottom;
+background-size: 6px 5px;
+background-repeat: repeat-x;
+  }
+
+  .wings{
+    display: flex;
+  }
+  .left-col{
+    flex: 1;
+    margin-right: 4rem;
+  }
+  .right-col{
+    flex: 1;
+  }
 }
 @media (min-width: 1024px){
-
+  .hide{
+    visibility: hidden;
+  }
+  .smaller{
+    font-size: 3.8rem !important;
+  }
   #map{
     display: block;
   }
@@ -703,6 +866,42 @@ position: relative;
     .info h3{
       font-size: 1rem;
     }
+    .menu-container{
+      width: 800px
+    }
+    .wing-box img{
+      width: 100%;
+    }
+    .wing-box{
+      margin-right: 4rem;
+    }
+    .menu h2{
+      font-size: 4rem;
+      margin: 6.8rem 0;
+    }
+    .menu h5{
+      font-size: 1.2rem;
+      padding: 0.7rem 0;
+    }
+    .menu h4{
+      font-size: 1.2rem;
+    }
+    .price{
+      font-size: 1.7rem;
+    }
+    .cents{
+      font-size: 1rem;
+    }
+    span.dots{
+      margin-top: 1rem;
+    }
+    nav.sticky {
+    top: 67px;
+    }
+    .food-item-description{
+    font-size: 0.9rem;
+    line-height: 48px;
+    }
 }
 @media (min-width: 1200px){
 
@@ -770,6 +969,9 @@ position: relative;
 }
 
 @media (min-width:1400px){
+  .smaller{
+    font-size: 5.7rem !important;
+  }
   nav.sticky{
     top: 115px;
   }
@@ -778,6 +980,9 @@ position: relative;
   }
   .menu-navigation span {
       font-size: 1.5rem;
+  }
+  .bottom-bar{
+    height: 78px;
   }
   .logo{
     flex: 0.2;
@@ -839,5 +1044,33 @@ margin-bottom: 3.5rem;
     width: 332px;
 position: relative;
 margin-top: 4.5rem
+  }
+  .menu-container{
+    width: 1200px;
+  }
+  .menu h2{
+    font-size: 5rem;
+  }
+  .menu h4{
+    font-size: 1.5rem;
+  }
+  .price{
+    font-size: 2rem;
+  }
+  span.dots{
+    margin-top: 2.5rem;
+  }
+  .menu h5{
+    font-size: 1.8rem;
+    padding: 1.5rem 0;
+  }
+  .food-item h4{
+    font-size: 1.8rem;
+  }
+  .wings img{
+      width: 40px;
+  }
+  .food-item-description{
+  font-size: 1.2rem;
   }
 }

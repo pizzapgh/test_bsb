@@ -12,6 +12,10 @@ $body: 'Patrick Hand', cursive;
 html{
   box-sizing: border-box;
   line-height: 21px;
+  letter-spacing: 1px;
+}
+.wing-box{
+  display: none;
 }
 #wings{
   position: absolute;
@@ -56,9 +60,7 @@ header{
   position: relative;
   overflow: hidden;
 }
-.wing-box{
-  display: none;
-}
+
 .locations-button-area a,
 .specials-button-area a{
   position: absolute;
@@ -197,7 +199,7 @@ display: flex;
     width: 100%;
 }
 .specials{
-background: url("{{ site.baseurl }}/assets/box-bg-2.png");
+background: url("{{ site.baseurl }}/assets/box-bg.png");
     min-height: 100vh;
     display: flex;
     width: 100%;
@@ -340,13 +342,14 @@ display: none;
     font-size: 1rem;
     color: $secondary;
     margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 1.5rem;
   }
   .specials-box p{
     font-family: $body;
     color: $light;
     font-size: 0.9rem;
     padding: 0 3rem;
+    margin: 0;
   }
 .specials-container{
   position: relative;
@@ -374,6 +377,7 @@ width: 90%;
     font-family: "Patrick Hand", cursive;
     font-size: 0.8rem;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .button-area li:hover{
@@ -408,6 +412,7 @@ width: 90%;
 .hours{
   font-family: $body;
   color: $light;
+  line-height: 28px;
 }
 .box-3{
   flex: 0.8;
@@ -481,7 +486,7 @@ font-family: $body;
 color: $light;
 }
 .price{
-  font-size: 1.7rem;
+  font-size: 1.2rem;
 }
 .cents{
   vertical-align: super;
@@ -654,7 +659,7 @@ span.food-item-dots{
     background: $primary;
 }
 .grit-3{
-    background-image: url("{{site.baseurl}}/assets/trexture-2.png");
+    background-image: url("{{site.baseurl}}/assets/trexture-3.png");
 
 }
 .location-info{
@@ -726,26 +731,27 @@ span.food-item-dots{
     .specials-box h3{
       font-size: 2rem;
       margin-top: 0.6rem;
-      margin-bottom: 0.6rem;
+      margin-bottom: 1.5rem;
     }
     .specials-box p{
       font-size: 1rem;
       padding: 0 9rem;
+      line-height: 25px;
     }
     .button-area{
-      width: 400px;
+      width: 500px;
       justify-content: space-between;
       margin-bottom: 0.7rem;
     }
     .button-area li{
-      margin-bottom: 0.6rem;
-      font-size: 1.1rem;
-      height: 45px;
+      margin-bottom: 0.7rem;
+      font-size: 1rem;
+      height: 40px;
     }
     .location-info{
       display: flex;
       align-items: center;
-        width: 65%;
+        width: 83%;
     }
     .info p{
       padding: 0;
@@ -773,6 +779,7 @@ align-items: center;
 
   .info h3{
     font-size: 1rem;
+    margin-bottom: 0.7rem;
   }
   .wings-pic-price{
     display: flex;
@@ -1004,8 +1011,8 @@ position: relative;
     margin-top: 3.3rem;
   }
   .locations-box h2{
-    font-size: 4rem;
-    margin-bottom: 3rem;
+    font-size: 6rem;
+    margin-bottom: 4rem;
   }
   .specials-box h3{
     font-size: 1.3rem;
@@ -1082,7 +1089,7 @@ position: relative;
   .specials-box{
     top: 48px;
     right: -220px;
-    padding: 4.5rem 4rem 4rem 4rem;
+    padding: 5rem 6rem 4rem 6rem;
   }
   .locations-box{
     position: absolute;
@@ -1091,12 +1098,12 @@ position: relative;
     box-shadow: 0 2px 45px rgba(0,0,0,1);
   }
   .specials-box h2{
-  font-size: 5.7rem;
-  margin-bottom: 3.8rem;
+  font-size: 7rem;
+  margin-bottom: 4.5rem;
 }
 .locations-box h2{
-font-size: 5rem;
-margin-bottom: 3.5rem;
+font-size: 6rem;
+margin-bottom: 4.5rem;
 }
   .star{
     left: -466px;

@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<header class="locations" >
+<header class="locations grit grit-3" >
     {% include site-navigation.html %}
 
   <div id="map"></div>
   <div class="locations-container">
-    <div class="specials-box locations-box">
+    <div class="specials-box locations-box grit">
       <h2>Locations</h2>
       <ul class="locations-button-area button-area">
         {% for fart in site.categories.locations-collect %}
@@ -26,6 +26,6 @@ layout: default
       {% include menu-navigation.html %}
 </header>
 
-<article class="menu">
+<article class="menu grit">
       {% include menu.html %}
 </article>

@@ -56,6 +56,9 @@ header{
   position: relative;
   overflow: hidden;
 }
+.wing-box{
+  display: none;
+}
 .locations-button-area a,
 .specials-button-area a{
   position: absolute;
@@ -80,6 +83,7 @@ li a{
   right: 0;
   z-index: 5;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8);
+  transform: translate3d(0,0,0) !important;
 }
 .bottom-bar{
   background: $dark;
@@ -90,6 +94,7 @@ li a{
   right: 0;
   height: 48px;
   display: flex;
+  transform: translate3d(0,0,0) !important;
 }
 
 .grit-2{
@@ -430,12 +435,13 @@ width: 90%;
   margin: auto;
 }
 .menu h2{
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: $headline;
   color: $light;
   margin-bottom: 3.5rem;
   text-transform: uppercase;
   margin-top: 3rem;
+  text-align: center;
 }
 .price{
   position: absolute;
@@ -594,6 +600,7 @@ span.food-item-dots{
   }
   nav.sticky{
     top: 92px;
+    transform: translate3d(0,0,0) !important;
   }
   .arrow{
     display: block;

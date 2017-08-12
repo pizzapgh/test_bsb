@@ -1,14 +1,16 @@
 
 
-$('a[href*="#"]').on('click', function (e) {
-	e.preventDefault();
 
-	$('html, body').animate({
-		scrollTop: $($(this).attr('href')).offset().top
-	}, 500, 'linear');
-});
 
 $(document).ready(function(){
+
+	$('a[href*="#"]').on('click', function (e) {
+		e.preventDefault();
+
+		$('html, body').animate({
+			scrollTop: $($(this).attr('href')).offset().top
+		}, 500, 'linear');
+	});
 
   // Even when the window is resized, run this code.
   $(window).resize(function(){
@@ -31,10 +33,15 @@ $(document).ready(function(){
       if( y > ninetypercent) {
 
         // Add the "sticky" class
-        $('.bottom-bar').addClass('sticky').addClass('grit');
+        $('.bottom-bar').addClass('sticky');
+				$('.highlight-me').addClass('current');
+				$('a[href*=specials]').removeClass('current');
+				$('a[href*=location]').removeClass('current');
+				$('a[href*=index]').removeClass('current');
       } else {
         // Else remove it.
         $('.bottom-bar').removeClass('sticky');
+				$('.highlight-me').removeClass('current');
       }
     });
 

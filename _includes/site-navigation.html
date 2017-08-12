@@ -5,10 +5,10 @@
     </div>
 
     <ul class="menu-mobile">
-      <li><a href="{{site.baseurl}}/index.html"}>Home</a></li>
-      <li><a href="#wings">Menu</a></li>
-      <li><a href="{{site.baseurl}}/specials-page.html">Specials</a></li>
-      <li><a href="{{site.baseurl}}/location-page.html">Locations</a></li>
+      <li><a href="{{site.baseurl}}/index.html" class="{% if page.url == '/' %}current{% endif %}">Home</a></li>
+      <li><a href="#wings" class="highlight-me">Menu</a></li>
+      <li><a href="{{site.baseurl}}/specials-page.html" class="{% if page.url == '/specials-page.html' %}current{% endif %}">Specials</a></li>
+      <li><a href="{{site.baseurl}}/location-page.html" class="{% if page.url == '/location-page.html' %}current{% endif %}">Locations</a></li>
     </ul>
 
 

@@ -4,6 +4,7 @@ $(document).ready(function() {
     $("#southside-info, #carnegie-info, #aliquippa-info, #beechview-info, #weirton-info, #coraopolis-info").hide();
 });
 
+
 $("#link-avalon").on('click', function() {
     $("#avalon-info").show();
     $("#southside-info, #carnegie-info, #aliquippa-info, #beechview-info, #weirton-info, #coraopolis-info").hide();
@@ -33,6 +34,25 @@ $("#link-weirton").on('click', function() {
     $("#weirton-info").show();
     $("#coraopolis-info, #aliquippa-info, #beechview-info, #carnegie-info, #avalon-info, #southside-info").hide();
 });
+
+$(".button-area li").on('click', function() {
+      $('.highlight-me').addClass('currents');
+});
+
+// buttons for locations
+
+var animationEvent =
+    "webkitAnimationEnd oanimationend msAnimationEnd animationend";
+$("#bounce").click(function() {
+  $("#logo").addClass("bounce");
+  $("#logo").one(animationEvent, function(event) {
+    $("#logo").removeClass("bounce");
+  });
+
+  // add animation class on every click
+});
+
+
 
 $(document).ready(function(){
 	$('a[href*="#"]').on('click', function (e) {
@@ -82,6 +102,7 @@ $(document).ready(function(){
 }); // jQuery
 
 
+
 var marker;
 var map;
 
@@ -104,7 +125,7 @@ $("#link6").click(function(){
     changeMarkerPos(40.405401, -80.030123);
 });
 $("#link7").click(function(){
-    changeMarkerPos(40.398829, -80.082950);
+    changeMarkerPos(40.418957, -80.589517);
 });
 
 
@@ -497,8 +518,8 @@ function initialize() {
         name: "Styled Map"
     });
     var mapProp = {
-        center: new google.maps.LatLng(40.439275, -80.021310),
-        zoom: 15,
+        center: new google.maps.LatLng(40.441830, -80.000387),
+        zoom: 14,
         panControl: false,
         zoomControl: false,
         mapTypeControl: false,
@@ -515,19 +536,21 @@ function initialize() {
     map.setMapTypeId('map_style')
 
     marker = new google.maps.Marker({
-        position: new google.maps.LatLng(40.439275, -80.021310),
+        position: new google.maps.LatLng(40.441830, -80.000387),
         animation: google.maps.Animation.DROP,
         icon: 'https://image.ibb.co/e5hmC5/bab_marker.png',
     });
 
     marker.setMap(map);
     map.panTo(marker.position);
+    map.panBy(-430, 0);
 }
 
 function changeMarkerPos(lat, lon){
     myLatLng = new google.maps.LatLng(lat, lon)
     marker.setPosition(myLatLng);
     map.panTo(myLatLng);
+    map.panBy(-430, 0);
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);

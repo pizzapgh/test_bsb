@@ -13,16 +13,37 @@ html{
   box-sizing: border-box;
   line-height: 21px;
   letter-spacing: 1px;
+  height: 100%;
+
 }
 body{
   margin: 0;
   padding: 0;
+  height: 100%;
 }
+.arrow-place:after{
+  content: "";
+  display: table;
+  width: 20px;
+  margin: auto;
+  content: "\f078";
+font-family: FontAwesome;
+color: #fff;
+margin-top: 2rem;
+font-size: 1.5rem;
+}
+.intro-logo {
+    margin-top: 9rem;
+    width: 255px;
+  }
 .hide-info, .hide-info-avalon, .hide-info-southside, .hide-info-carnegie{
   display: none;
 }
 .show-info{
   display: block;
+}
+.logo img{
+  width: 47px;
 }
 a{
   text-decoration: none;
@@ -30,6 +51,9 @@ a{
 }
 .current{
   color: $secondary;
+}
+.highlight{
+  background-color: $secondary;
 }
 .wing-box{
   display: none;
@@ -62,7 +86,8 @@ nav.sticky {
   position: fixed !important;
   top:53px;
   z-index: 4;
-  background-image: url("{{site.baseurl}}/assets/sticky-nav-bg.png") !important;
+  transition: background-color 0.5s ease;
+   background-color: #313131;
 }
 #map_canvas, #map{
   display: none;
@@ -119,12 +144,12 @@ display: flex;
   width: 90%;
   margin: auto;
 }
-.logo{
-  max-width: 60%;
-  flex: 0.4;
-}
-.logo-box img{
+.intro-logo{
     animation: fadein 2s;
+    width: 245px;
+}
+.bounce{
+  animation: bounceOut 0.4s linear;
 }
 @keyframes fadein {
     from {
@@ -158,17 +183,20 @@ display: flex;
         opacity: 1;
     }
 }
-ul.menu-mobile {
-    display: flex;
-    flex: 0.7;
-    justify-content: space-between;
-    font-family: $headline;
+.main-navigation{
+  display: flex;
+  flex: 1;
+  justify-content: center;
 }
-ul.menu-mobile li:nth-of-type(1) {
-    display: none;
+.main-navigation a{
+  font-family: $headline;
+  padding: .25rem 0.6rem 0;
 }
-ul.menu-mobile li:nth-of-type(3) {
-    display: none;
+.main-navigation li:nth-of-type(1){
+  display: none;
+}
+.main-navigation li:nth-of-type(3){
+  display: none;
 }
 .fa-navicon{
   color: $secondary;
@@ -186,9 +214,6 @@ ul.menu-mobile li:nth-of-type(3) {
 }
 #toggle:checked + .toggle-navigation-drop{
   display: block;
-}
-.top-bar label{
-    margin-left: 2.2rem;
 }
 .toggle-flex{
   display: flex;
@@ -235,8 +260,8 @@ display: flex;
     background: url("{{ site.baseurl }}/assets/box-bg-2.png");
     background: $primary;
     min-height: 100vh;
-    display: flex;
     width: 100%;
+    text-align: center;
 }
 .specials{
     min-height: 100vh;
@@ -250,14 +275,9 @@ background-color: #585858;
     display: flex;
     width: 100%;
 }
-.logo-box{
-  align-items: center;
-  justify-content: center;
-  margin: 187px auto;
-}
-.logo-box img{
-  width: 260px;
-}
+
+
+
 
 
 /* home-slide
@@ -603,6 +623,9 @@ span.food-item-dots{
   }
 }
 @media (min-width: 375px) {
+  .main-navigation a{
+    padding: .25rem 1.2rem 0;
+  }
 .button-area{
   width: 100%;
   }
@@ -611,14 +634,11 @@ span.food-item-dots{
   }
 }
 @media (min-width: 400px){
+  .intro-logo {
+      margin-top: 10rem;
+    }
   .button-area li a{
     width: 182px;
-  }
-  ul.menu-mobile li{
-    font-size: 1.3rem;
-  }
-  .top-bar label{
-    margin-left: 3rem;
   }
   .toggle-specials li{
     font-size: 1.3rem;
@@ -627,7 +647,10 @@ span.food-item-dots{
   .toggle-social .fa-twitter{
     font-size: 2.5rem;
   }
-
+.main-navigation a{
+  padding: .25rem 1.4rem 0;
+  font-size: 1.2rem;
+}
   /* site-navigation
   -----------------------*/
 
@@ -655,10 +678,31 @@ span.food-item-dots{
 }
 
 @media (min-width: 768px){
+  .logo img{
+    width: 88px;
+  }
+  .main-navigation a{
+    padding: .25rem 1.9rem 0;
+  }
   .button-area{
     width: 95%;
     margin: 1rem auto 1rem;
     }
+    .intro-logo {
+    margin-top: 11rem;
+        width: 380px;
+}
+    .arrow-place:after {
+    content: "";
+    display: table;
+    width: 20px;
+    margin: auto;
+    content: "\f078";
+    font-family: FontAwesome;
+    color: #fff;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+}
   .menu-navigation span {
     margin-left: 1rem;
 }
@@ -700,18 +744,9 @@ span.food-item-dots{
   .toggle-navigation-drop{
       top: 98px;
     }
-    ul.menu-mobile{
-      flex: 0.7;
-    }
-    .logo{
-      flex: 0.3;
-    }
-  ul.menu-mobile li{
-    font-size: 2.5rem;
-  }
-  .top-bar label{
-    margin-left: 5.2rem;
-  }
+.main-navigation a{
+  font-size: 2rem;
+}
   [type="checkbox"]:checked + .nested-navigation {
   top: 109px;
   }
@@ -897,6 +932,33 @@ background-repeat: repeat-x;
   }
 }
 @media (min-width: 1024px){
+  .intro-logo {
+  margin-top: 9rem;
+      width: 511px;
+}
+  .arrow-place:after {
+  content: "";
+  display: table;
+  width: 20px;
+  margin: auto;
+  content: "\f078";
+  font-family: FontAwesome;
+  color: #fff;
+  margin-top: 3rem;
+  font-size: 2.5rem;
+}
+  .logo img{
+    width: 78px;
+  }
+  .social-desktop li {
+    margin-right: 1rem;
+}
+.social-desktop li:last-child {
+  margin-right: 0;
+}
+  .main-navigation a{
+    font-size: 1.4rem;
+  }
   .button-area li a{
     width: 279px;
 height: 40px;
@@ -933,29 +995,23 @@ position: relative;
     height: 100vh;
     width: 100%;
     padding: 0;
-    margin: 0;
     }
-
+.map-container{
+  height: 100%;
+ position: relative;
+}
   .container{
     width: 800px;
     margin: auto;
     }
-  .logo{
-    flex: 0.2;
-  }
   .top-bar{
     padding: 1rem 2rem;
   }
-  ul.menu-mobile{
-    flex: 0.7;
-  }
-  ul.menu-mobile li{
-    font-size: 1.5rem;
-  }
-  ul.menu-mobile li:nth-of-type(1) {
+
+  ul.main-navigation li:nth-of-type(1) {
       display: block;
   }
-  ul.menu-mobile li:nth-of-type(3) {
+  ul.main-navigation li:nth-of-type(3) {
       display: block;
   }
   .social-desktop .fa-facebook-square,
@@ -967,8 +1023,6 @@ position: relative;
   }
   .social-desktop{
     display: flex;
-    flex: 0.1;
-    justify-content: space-between;
   }
   .toggle-navigation-drop{
     display: none;
@@ -1134,6 +1188,31 @@ position: relative;
 }
 
 @media (min-width:1400px){
+  .intro-logo {
+  margin-top: 14rem;
+      width: 728px;
+}
+  .arrow-place:after {
+  content: "";
+  display: table;
+  width: 20px;
+  margin: auto;
+  content: "\f078";
+  font-family: FontAwesome;
+  color: #fff;
+  margin-top: 4.5rem;
+  font-size: 3rem;
+}
+  .social-desktop li {
+    margin-right: 1.6rem;
+}
+  .logo img{
+    width: 108px;
+  }
+  .main-navigation a{
+    font-size: 2rem;
+    padding: .25rem 3rem 0;
+  }
   #sandwiches {
     position: absolute;
     bottom: 7380px;
@@ -1154,7 +1233,7 @@ position: relative;
     font-size: 5.7rem !important;
   }
   nav.sticky{
-    top: 115px;
+    top: 102px;
   }
   .menu-navigation img {
       width: 65px;
@@ -1164,12 +1243,6 @@ position: relative;
   }
   .bottom-bar{
     height: 78px;
-  }
-  .logo{
-    flex: 0.2;
-  }
-  ul.menu-mobile li{
-    font-size: 2rem;
   }
   .social-desktop .fa-facebook-square, .social-desktop .fa-twitter {
     font-size: 2.6rem;
@@ -1192,7 +1265,7 @@ position: relative;
   .locations-box{
     position: absolute;
     left: -740px;
-    top: 28px;
+    top: 48px;
     box-shadow: 0 2px 45px rgba(0,0,0,1);
   }
   .specials-box h2{

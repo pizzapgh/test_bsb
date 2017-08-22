@@ -48,7 +48,6 @@ $("#bounce").click(function() {
   $("#logo").one(animationEvent, function(event) {
     $("#logo").removeClass("bounce");
   });
-
   // add animation class on every click
 });
 
@@ -87,7 +86,7 @@ $(document).ready(function(){
         $('.bottom-bar').addClass('sticky');
 				$('.highlight-me').addClass('current');
 				$('a[href*=specials]').removeClass('current');
-				$('a[href*=location]').removeClass('current');
+				$('a[href*=bellvue]').removeClass('current');
 				$('a[href*=index]').removeClass('current');
       } else {
         // Else remove it.

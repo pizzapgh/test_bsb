@@ -47,14 +47,17 @@ footer {
 }
 footer img {
   border-style: none;
-margin: 4rem 0 1.5rem;
+margin: 4rem 0 1.8rem;
 width: 100px;
+}
+footer img:last-child{
+  margin: 1rem 0 0;
 }
 .copy{
   font-family: $headline;
   color: $secondary;
   font-size: 0.9rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 .creators{
   font-family: $body;
@@ -102,22 +105,22 @@ a{
 }
 #wings {
   position: absolute;
-  top: -58px;
+  top: -75px;
 }
 #wings a:active{
 color: green;
 }
 #sandwiches{
   position: absolute;
-  bottom: 6100px;
+  bottom: 6740px;
 }
 #salads{
   position: absolute;
-bottom: 2500px;
+bottom: 2850px;
 }
 #sides{
   position: absolute;
-bottom: 1400px;
+bottom: 1750px;
 }
 
 nav.sticky {
@@ -425,7 +428,7 @@ a[href*="sides"] {
 }
 .menu-navigation span{
   display: none;
-  font-family: $headline;
+  font-family: $body;
   color: $light;
   margin-left: 1.2rem;
 }
@@ -684,7 +687,30 @@ span.food-item-dots{
     width: 162px;
   }
 }
+@media (min-width: 375px){
+  #sandwiches {
+    position: absolute;
+    bottom: 6350px;
+  }
+  #salads{
+    position: absolute;
+  bottom: 2750px;
+  }
+  #sides {
+      position: absolute;
+      bottom: 1750px;
+  }
+}
+
 @media (min-width: 400px){
+  #salads{
+    position: absolute;
+  bottom: 2750px;
+  }
+  #sandwiches {
+    position: absolute;
+    bottom: 6200px;
+  }
   .intro-logo {
       margin-top: 10rem;
     }
@@ -716,7 +742,7 @@ span.food-item-dots{
     font-size: 2.5rem;
   }
  .specials-box p{
-   padding: 0 4rem;
+   padding: 0 1.5rem;
  }
  .box-4{
    flex: 0.8;
@@ -763,16 +789,16 @@ span.food-item-dots{
 }
   #wings{
     position: absolute;
-    top: -120px;
+    top: -150px;
   }
   #sandwiches {
     position: absolute;
-    bottom: 5425px;
-}
+    bottom: 5790px;
+  }
 
 #sides {
     position: absolute;
-    bottom: 1500px;
+    bottom: 1800px;
 }
   .smaller{
     font-size: 2.8rem !important;
@@ -897,7 +923,7 @@ span.food-item-dots{
     }
     .specials-box p{
       font-size: 1rem;
-      padding: 0 9rem;
+      padding: 0 5rem;
       line-height: 25px;
     }
 
@@ -1027,23 +1053,27 @@ background-repeat: repeat-x;
 height: 40px;
 line-height: 40px;
   }
+  #wings{
+    position: absolute;
+    top: -110px;
+  }
   #sandwiches {
     position: absolute;
-    bottom: 6725px;
+    bottom: 7125px;
 }
 #salads {
     position: absolute;
-    bottom: 2904px;
+    bottom: 3200px;
 }
 #sides {
     position: absolute;
-    bottom: 1700px;
+    bottom: 2000px;
 }
   .hide{
     visibility: hidden;
   }
   .smaller{
-    font-size: 3.8rem !important;
+    font-size: 3rem !important;
   }
 #map_canvas, #map{
     display: block;
@@ -1245,9 +1275,36 @@ position: relative;
     nav.sticky {
     top: 64px;
   }
+  #sandwiches {
+    position: absolute;
+    bottom: 7100px;
+  }
+  #sides {
+      position: absolute;
+      bottom: 2000px;
+  }
 }
 
 @media (min-width:1400px){
+  footer img {
+    border-style: none;
+    margin: 4rem 0 1.8rem;
+    width: 140px;
+}
+.copy {
+    font-family: "Knewave", cursive;
+    color: #f68a1e;
+    font-size: 1rem;
+}
+.creators {
+    font-family: "Patrick Hand", cursive;
+    color: #fff;
+    font-size: 0.9rem;
+}
+  #wings{
+    position: absolute;
+    top: -180px;
+  }
   .top-bar{
     height: 105px;
   }
@@ -1276,17 +1333,20 @@ position: relative;
     font-size: 2.3rem;
     padding: 2rem 3rem;
   }
+  .menu-navigation a{
+    padding: 1rem 6rem;
+  }
   #sandwiches {
     position: absolute;
-    bottom: 7380px;
+        bottom: 7704px;
 }
 #salads {
     position: absolute;
-    bottom: 3225px;
+    bottom: 3525px;
 }
 #sides {
     position: absolute;
-    bottom: 1963px;
+    bottom: 2300px;
 }
 
   .smaller{

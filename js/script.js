@@ -37,7 +37,7 @@ $("#link-weirton").on('click', function() {
 
 $("#link-midland").on('click', function() {
     $("#midland-info").show();
-    $("#coraopolis-info, #aliquippa-info, #beechview-info, #carnegie-info, #avalon-info, #southside-info").hide();
+    $("#coraopolis-info, #aliquippa-info, #beechview-info, #carnegie-info, #avalon-info, #southside-info, #weirton-info").hide();
 });
 
 $(".button-area li").on('click', function() {
@@ -130,6 +130,9 @@ $("#link6").click(function(){
 });
 $("#link7").click(function(){
     changeMarkerPos(40.418957, -80.589517);
+});
+$("#link8").click(function(){
+    changeMarkerPos(40.632565, -80.446455);
 });
 
 
@@ -545,6 +548,11 @@ function initialize() {
         icon: 'https://image.ibb.co/e5hmC5/bab_marker.png',
     });
 
+    google.maps.event.addListener(marker, 'click', function() {
+         window.open('https://goo.gl/maps/w25fGMArhby');
+      });
+
+
     marker.setMap(map);
     map.panTo(marker.position);
     map.panBy(-430, 0);
@@ -556,5 +564,6 @@ function changeMarkerPos(lat, lon){
     map.panTo(myLatLng);
     map.panBy(-430, 0);
 }
+
 
 google.maps.event.addDomListener(window, 'load', initialize);

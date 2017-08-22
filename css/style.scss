@@ -6,8 +6,22 @@ $secondary: #f68a1e;
 $light: #fff;
 $dark: #1d1d1d;
 $dark-gray: #232323;
+
+/*
 $headline: 'Knewave', cursive;
-$body: 'Patrick Hand', cursive;
+$body: 'Anton', sans-serif;
+*/
+
+/* $headline: 'Knewave', cursive;
+$body: 'Patrick Hand', cursive; */
+
+/* $body: 'Contrail One', cursive; */
+/* $headline: 'Fredoka One', cursive; */
+
+$headline: 'Knewave', cursive;
+$body: 'Fjalla One', sans-serif;
+
+
 
 html{
   box-sizing: border-box;
@@ -50,7 +64,8 @@ a{
   color: $light;
 }
 .current{
-  color: $secondary;
+      transition: color 0.8s ease;
+      color: $secondary
 }
 .highlight{
   background-color: $secondary;
@@ -78,10 +93,6 @@ bottom: 2500px;
 bottom: 1400px;
 }
 
-.bob{
-  float: right;
-  margin-top: 1.5rem;
-}
 nav.sticky {
   position: fixed !important;
   top:53px;
@@ -116,12 +127,13 @@ ul{
   right: 0;
   z-index: 5;
   transform: translate3d(0,0,0) !important;
+  display: flex;
+  align-items: center;
 }
 .bottom-bar{
   background: $dark;
   position: absolute !important;
   bottom: 0;
-  padding: 0.1rem 1rem;
   left: 0;
   right: 0;
   height: 48px;
@@ -189,8 +201,9 @@ display: flex;
   justify-content: center;
 }
 .main-navigation a{
-  font-family: $headline;
-  padding: .25rem 0.6rem 0;
+  font-family: $body;
+  text-transform: uppercase;
+  padding: 1rem 0.6rem;
 }
 .main-navigation li:nth-of-type(1){
   display: none;
@@ -367,12 +380,25 @@ display: none;
   justify-content: space-between;
   align-items: center;
 }
+.menu-navigation a{
+  padding: 0rem 1rem;
+}
+.main-navigation a:hover{
+  color: $secondary;
+  transition: all .2s ease;
+}
+  a[href*="sandwiches"] {
+    padding-left: 0 !important;
+}
+a[href*="sides"] {
+  padding-right: 0 !important;
+}
 .menu-navigation img{
   width: 40px;
 }
 .menu-navigation span{
   display: none;
-  font-family: $body;
+  font-family: $headline;
   color: $light;
   margin-left: 1.2rem;
 }
@@ -439,10 +465,11 @@ display: none;
   margin-bottom: 0.7rem;
   line-height: 55px;
   display: block;
- background: $primary;
+ background-color: $primary;
  cursor: pointer;
 }
 .button-area li a:hover{
+      transition: background-color 0.5s ease;
   background-color: $secondary;
 }
 .star{
@@ -579,7 +606,6 @@ color: $light;
     width: 30px;
 }
 .food-item-description{
-  font-family: "Patrick Hand", cursive;
 color: #fff;
 text-transform: capitalize;
 font-size: 0.8rem;
@@ -591,11 +617,7 @@ span.food-item-dots{
 .smaller{
   font-size: 1.2rem !important;
 }
-.menu-navigation li img:hover {
-  cursor: pointer;
-  -webkit-animation: bounceOut 0.4s linear;
-          animation: bounceOut 0.4s linear;
-}
+
 
 @keyframes bounceOut {
   0% {
@@ -623,8 +645,10 @@ span.food-item-dots{
   }
 }
 @media (min-width: 375px) {
+  .bottom-bar{
+  }
   .main-navigation a{
-    padding: .25rem 1.2rem 0;
+    padding: 1rem 1.2rem;
   }
 .button-area{
   width: 100%;
@@ -648,7 +672,7 @@ span.food-item-dots{
     font-size: 2.5rem;
   }
 .main-navigation a{
-  padding: .25rem 1.4rem 0;
+  padding: 1rem 1.4rem;
   font-size: 1.2rem;
 }
   /* site-navigation
@@ -678,11 +702,14 @@ span.food-item-dots{
 }
 
 @media (min-width: 768px){
+  .top-bar{
+    height: 80px;
+  }
   .logo img{
     width: 88px;
   }
   .main-navigation a{
-    padding: .25rem 1.9rem 0;
+    padding: 1rem 1.9rem;
   }
   .button-area{
     width: 95%;
@@ -706,10 +733,6 @@ span.food-item-dots{
   .menu-navigation span {
     margin-left: 1rem;
 }
-.bob {
-    float: right;
-    margin-top: 0.7rem;
-}
   #wings{
     position: absolute;
     top: -120px;
@@ -727,19 +750,16 @@ span.food-item-dots{
     font-size: 2.8rem !important;
   }
   nav.sticky{
-    top: 92px;
+    top: 80px;
     transform: translate3d(0,0,0) !important;
   }
   .arrow{
-    display: block;
+    display: none;
     bottom: 130px;
   }
 
   .fa-navicon{
     font-size: 3.4rem;
-  }
-  .top-bar{
-    padding: 1rem 2rem;
   }
   .toggle-navigation-drop{
       top: 98px;
@@ -791,15 +811,12 @@ span.food-item-dots{
   -----------------------*/
 
   .menu-navigation span{
-    display: block;
+    display: none;
   }
   .menu-navigation li{
     display: flex;
       align-items: center;
     }
-  .bottom-bar{
-    padding: 1rem 2rem;
-  }
 
   /* specials-slide
   -----------------------*/
@@ -930,10 +947,27 @@ background-repeat: repeat-x;
   .right-col{
     flex: 1;
   }
+  .menu-navigation img {
+    width: 56px;
+}
+  .bottom-bar{
+    height: 80px;
+  }
 }
 @media (min-width: 1024px){
+  .menu-navigation span{
+    display: block;
+  }
+.menu-navigation a {
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+}
+.menu-navigation a:hover{
+      animation: bounceOut 0.4s linear;
+}
   .intro-logo {
-  margin-top: 9rem;
+  margin-top: 10.5rem;
       width: 511px;
 }
   .arrow-place:after {
@@ -946,6 +980,7 @@ background-repeat: repeat-x;
   color: #fff;
   margin-top: 3rem;
   font-size: 2.5rem;
+  display: none;
 }
   .logo img{
     width: 78px;
@@ -1004,9 +1039,6 @@ position: relative;
     width: 800px;
     margin: auto;
     }
-  .top-bar{
-    padding: 1rem 2rem;
-  }
 
   ul.main-navigation li:nth-of-type(1) {
       display: block;
@@ -1030,9 +1062,6 @@ position: relative;
 
   /* site-navigation
   -----------------------*/
-  .bottom-bar{
-    padding: 0.4rem 2rem;
-  }
   /* bottom-bar
   -----------------------*/
 
@@ -1099,7 +1128,7 @@ position: relative;
       margin-top: 1rem;
     }
     nav.sticky {
-    top: 67px;
+    top: 80px;
     }
     .food-item-description{
     font-size: 0.9rem;
@@ -1117,6 +1146,13 @@ position: relative;
 
 }
 @media (min-width:1024px) and (max-height: 768px){
+  .menu-navigation a{
+    padding: 0.2rem 3rem;
+  }
+  .bottom-bar,
+  .top-bar{
+    height: 65px;
+  }
   .button-area{
     width: 80%;
     margin: 0.5rem auto 0.5rem;
@@ -1131,13 +1167,6 @@ position: relative;
   margin-top: -1.6rem;
   width: 545px;
   }
-  .top-bar{
-    padding: 0.2rem 2rem;
-  }
-  .bottom-bar{
-    padding: 0.5rem 0 0.9rem 0;
-    height: 35px;
-  }
   .star{
     left: -240px;
     top: -18px;
@@ -1147,7 +1176,7 @@ position: relative;
   }
   .specials-box{
     right: -30px;
-    padding: 2rem 0 1rem;
+    padding: 2.3rem 0 2rem;
     margin-top: 3.3rem;
   }
   .specials-box h2{
@@ -1185,16 +1214,22 @@ position: relative;
     width: 300px;
     position: relative;
     }
+    nav.sticky {
+    top: 64px;
+  }
 }
 
 @media (min-width:1400px){
+  .top-bar{
+    height: 105px;
+  }
   .intro-logo {
-  margin-top: 14rem;
-      width: 728px;
+  margin-top: 15rem;
+      width: 812px;
 }
   .arrow-place:after {
   content: "";
-  display: table;
+  display: none;
   width: 20px;
   margin: auto;
   content: "\f078";
@@ -1211,7 +1246,7 @@ position: relative;
   }
   .main-navigation a{
     font-size: 2rem;
-    padding: .25rem 3rem 0;
+    padding: 2rem 3rem;
   }
   #sandwiches {
     position: absolute;
@@ -1225,10 +1260,7 @@ position: relative;
     position: absolute;
     bottom: 1963px;
 }
-  .bob {
-    float: right;
-    margin-top: 1.2rem;
-}
+
   .smaller{
     font-size: 5.7rem !important;
   }
@@ -1242,7 +1274,7 @@ position: relative;
       font-size: 1.5rem;
   }
   .bottom-bar{
-    height: 78px;
+    height: 100px;
   }
   .social-desktop .fa-facebook-square, .social-desktop .fa-twitter {
     font-size: 2.6rem;

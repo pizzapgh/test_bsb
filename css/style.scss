@@ -18,8 +18,11 @@ $body: 'Patrick Hand', cursive; */
 /* $body: 'Contrail One', cursive; */
 /* $headline: 'Fredoka One', cursive; */
 
+/* $headline: 'Crete Round', serif;
+$body: 'ABeeZee', sans-serif; */
+
 $headline: 'Knewave', cursive;
-$body: 'Fjalla One', sans-serif;
+$body: 'Patrick Hand', cursive;
 
 
 
@@ -35,6 +38,29 @@ body{
   padding: 0;
   height: 100%;
 }
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1.6rem;
+    text-align: center;
+}
+footer img {
+  border-style: none;
+margin: 4rem 0 1.5rem;
+width: 100px;
+}
+.copy{
+  font-family: $headline;
+  color: $secondary;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+.creators{
+  font-family: $body;
+  color: $light;
+  font-size: 0.8rem;
+}
 .arrow-place:after{
   content: "";
   display: table;
@@ -45,6 +71,7 @@ font-family: FontAwesome;
 color: #fff;
 margin-top: 2rem;
 font-size: 1.5rem;
+display: none;
 }
 .intro-logo {
     margin-top: 9rem;
@@ -201,8 +228,8 @@ display: flex;
   justify-content: center;
 }
 .main-navigation a{
-  font-family: $body;
-  text-transform: uppercase;
+  font-family: $headline;
+  text-transform: capitalize;
   padding: 1rem 0.6rem;
 }
 .main-navigation li:nth-of-type(1){
@@ -420,7 +447,7 @@ a[href*="sides"] {
     font-size: 2rem;
     font-family: $headline;
     color: $light;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
   }
   .specials-box h3{
@@ -433,8 +460,8 @@ a[href*="sides"] {
   .specials-box p{
     font-family: $body;
     color: $light;
-    font-size: 0.9rem;
-    padding: 0 3rem;
+    font-size: 0.8rem;
+    padding: 0 1.5rem;
     margin: 0;
   }
 .button-container{
@@ -461,9 +488,9 @@ a[href*="sides"] {
 }
 .button-area li a{
   width: 138px;
-  height: 55px;
+  height: 35px;
   margin-bottom: 0.7rem;
-  line-height: 55px;
+  line-height: 35px;
   display: block;
  background-color: $primary;
  cursor: pointer;
@@ -480,13 +507,12 @@ a[href*="sides"] {
 .location-info{
   display: flex;
   justify-content: space-between;
-  width: 83%;
   margin: 1.5rem auto;
 }
 .info h3{
   font-size: 1rem;
   color: $light;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.6rem;
 }
 .fa-map-marker{
   color: $secondary;
@@ -500,6 +526,7 @@ a[href*="sides"] {
   font-family: $body;
   color: $light;
   line-height: 28px;
+  font-size: 0.9rem;
 }
 .box-3{
   flex: 0.8;
@@ -729,6 +756,7 @@ span.food-item-dots{
     color: #fff;
     margin-top: 3rem;
     font-size: 2.5rem;
+    display: none;
 }
   .menu-navigation span {
     margin-left: 1rem;
@@ -1245,7 +1273,7 @@ position: relative;
     width: 108px;
   }
   .main-navigation a{
-    font-size: 2rem;
+    font-size: 2.3rem;
     padding: 2rem 3rem;
   }
   #sandwiches {

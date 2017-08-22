@@ -1,6 +1,6 @@
 ---
 layout: specials-post
-title:  "All You Can Eat Wings"
+title:  "All You Can Eat"
 date:   2017-05-01 20:59:39 -0500
 meta: All you can eat wings!
 categories: specials-collect

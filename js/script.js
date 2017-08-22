@@ -1,37 +1,42 @@
 
 
 $(document).ready(function() {
-    $("#southside-info, #carnegie-info, #aliquippa-info, #beechview-info, #weirton-info, #coraopolis-info").hide();
+    $("#southside-info, #carnegie-info, #aliquippa-info, #beechview-info, #weirton-info, #coraopolis-info, #midland-info").hide();
 });
 
 
 $("#link-avalon").on('click', function() {
     $("#avalon-info").show();
-    $("#southside-info, #carnegie-info, #aliquippa-info, #beechview-info, #weirton-info, #coraopolis-info").hide();
+    $("#southside-info, #carnegie-info, #aliquippa-info, #beechview-info, #weirton-info, #coraopolis-info, #midland-info").hide();
 });
 
 $("#link-southside").on('click', function() {
     $("#southside-info").show();
-    $("#carnegie-info, #aliquippa-info, #beechview-info, #weirton-info, #coraopolis-info, #avalon-info").hide();
+    $("#carnegie-info, #aliquippa-info, #beechview-info, #weirton-info, #coraopolis-info, #avalon-info, #midland-info").hide();
 });
 $("#link-carnegie").on('click', function() {
     $("#carnegie-info").show();
-    $("#aliquippa-info, #beechview-info, #weirton-info, #coraopolis-info, #avalon-info, #southside-info").hide();
+    $("#aliquippa-info, #beechview-info, #weirton-info, #coraopolis-info, #avalon-info, #southside-info, #midland-info").hide();
 });
 $("#link-coraopolis").on('click', function() {
     $("#coraopolis-info").show();
-    $("#aliquippa-info, #beechview-info, #weirton-info, #carnegie-info, #avalon-info, #southside-info").hide();
+    $("#aliquippa-info, #beechview-info, #weirton-info, #carnegie-info, #avalon-info, #southside-info, #midland-info").hide();
 });
 $("#link-aliquippa").on('click', function() {
     $("#aliquippa-info").show();
-    $("#coraopolis-info, #beechview-info, #weirton-info, #carnegie-info, #avalon-info, #southside-info").hide();
+    $("#coraopolis-info, #beechview-info, #weirton-info, #carnegie-info, #avalon-info, #southside-info, #midland-info").hide();
 });
 $("#link-beechview").on('click', function() {
     $("#beechview-info").show();
-    $("#coraopolis-info, #aliquippa-info, #weirton-info, #carnegie-info, #avalon-info, #southside-info").hide();
+    $("#coraopolis-info, #aliquippa-info, #weirton-info, #carnegie-info, #avalon-info, #southside-info, #midland-info").hide();
 });
 $("#link-weirton").on('click', function() {
     $("#weirton-info").show();
+    $("#coraopolis-info, #aliquippa-info, #beechview-info, #carnegie-info, #avalon-info, #southside-info, #midland-info").hide();
+});
+
+$("#link-midland").on('click', function() {
+    $("#midland-info").show();
     $("#coraopolis-info, #aliquippa-info, #beechview-info, #carnegie-info, #avalon-info, #southside-info").hide();
 });
 

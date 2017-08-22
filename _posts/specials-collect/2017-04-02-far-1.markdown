@@ -1,6 +1,6 @@
 ---
 layout: specials-post
-title:  "Wing/Hoagie Special"
+title:  "Wing/Hoagie"
 date:   2017-05-01 20:59:39 -0500
 meta: All you can eat wings!
 category: specials-collect

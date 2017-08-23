@@ -789,6 +789,15 @@ span.food-item-dots{
 }
 
 @media (min-width: 768px){
+  .info p{
+    font-size: 1rem;
+  }
+  .hours{
+    font-family: $body;
+    color: $light;
+    line-height: 28px;
+    font-size: 1rem;
+  }
   .top-bar{
     height: 80px;
   }
@@ -1189,6 +1198,7 @@ position: relative;
     }
     .info h3{
       font-size: 1rem;
+      margin-bottom: 0.5rem;
     }
     .menu-container{
       width: 800px
@@ -1301,6 +1311,10 @@ position: relative;
   }
   .info h3{
     font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .hours{
+    font-size: 0.9rem;
   }
   .button-location-container{
     width: 300px;
@@ -1416,6 +1430,9 @@ position: relative;
     right: -220px;
     padding: 5rem 6rem 4rem 6rem;
   }
+  .specials-box p{
+    font-size: 1rem;
+  }
   .locations-box{
     position: absolute;
     left: -740px;
@@ -1470,6 +1487,9 @@ margin-top: 4.5rem
   }
   .price{
     font-size: 2rem;
+  }
+  .hours{
+    font-size: 1rem;
   }
   span.dots{
     margin-top: 2.5rem;

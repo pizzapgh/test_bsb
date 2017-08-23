@@ -45,6 +45,9 @@ footer {
     padding-bottom: 1.6rem;
     text-align: center;
 }
+footer .container{
+  flex-direction: column;
+}
 footer img {
   border-style: none;
 margin: 4rem 0 1.8rem;
@@ -53,16 +56,20 @@ width: 100px;
 footer img:last-child{
   margin: 1rem 0 0;
 }
+.note{
+  font-family: $body;
+  color: $light;
+}
 .copy{
   font-family: $headline;
   color: $secondary;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   margin-bottom: 0.5rem;
 }
 .creators{
   font-family: $body;
   color: $light;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 .arrow-place:after{
   content: "";
@@ -675,6 +682,17 @@ span.food-item-dots{
   }
 }
 @media (min-width: 375px) {
+  .copy{
+    font-family: $headline;
+    color: $secondary;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .creators{
+    font-family: $body;
+    color: $light;
+    font-size: 0.8rem;
+  }
   .bottom-bar{
   }
   .main-navigation a{
@@ -703,6 +721,17 @@ span.food-item-dots{
 }
 
 @media (min-width: 400px){
+  .copy{
+    font-family: $headline;
+    color: $secondary;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .creators{
+    font-family: $body;
+    color: $light;
+    font-size: 0.8rem;
+  }
   #salads{
     position: absolute;
   bottom: 2750px;

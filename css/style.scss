@@ -71,6 +71,7 @@ footer img:last-child{
   color: $light;
   font-size: 0.7rem;
 }
+
 .arrow-place:after{
   content: "";
   display: table;
@@ -301,6 +302,10 @@ display: flex;
 }
 .social-desktop a{
   color: $secondary;
+}
+.social-desktop a:hover{
+    transition: all .2s ease;
+  color: #bf6c18;
 }
 
 /* site-navigation
@@ -1379,7 +1384,7 @@ position: relative;
 }
 
   .smaller{
-    font-size: 5.7rem !important;
+    font-size: 5rem !important;
   }
   nav.sticky{
     top: 102px;

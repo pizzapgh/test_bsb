@@ -85,8 +85,8 @@ font-size: 1.5rem;
 display: none;
 }
 .intro-logo {
-    margin-top: 9rem;
     width: 255px;
+    margin: auto;
   }
 .hide-info, .hide-info-avalon, .hide-info-southside, .hide-info-carnegie{
   display: none;
@@ -161,12 +161,14 @@ ul{
 .top-bar{
   background-color: $dark;
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 5;
   transform: translate3d(0,0,0) !important;
   display: flex;
   align-items: center;
+  height: 60px;
 }
 .bottom-bar{
   background: $dark;
@@ -174,7 +176,7 @@ ul{
   bottom: 0;
   left: 0;
   right: 0;
-  height: 48px;
+  height: 60px;
   display: flex;
   transform: translate3d(0,0,0) !important;
 }
@@ -197,6 +199,7 @@ display: flex;
 .intro-logo{
     animation: fadein 2s;
     width: 245px;
+    align-self: center;
 }
 .bounce{
   animation: bounceOut 0.4s linear;
@@ -314,9 +317,13 @@ display: flex;
 .home{
     background: url("{{ site.baseurl }}/assets/box-bg-2.png");
     background: $primary;
-    min-height: 100vh;
+    min-height: calc(100vh - 120px);
     width: 100%;
     text-align: center;
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
 }
 .specials{
     min-height: 100vh;
@@ -745,9 +752,6 @@ span.food-item-dots{
     position: absolute;
     bottom: 6200px;
   }
-  .intro-logo {
-      margin-top: 10rem;
-    }
   .button-area li a{
     width: 182px;
   }
@@ -812,7 +816,6 @@ span.food-item-dots{
     margin: 1rem auto 1rem;
     }
     .intro-logo {
-    margin-top: 11rem;
         width: 380px;
 }
     .arrow-place:after {
@@ -881,6 +884,9 @@ span.food-item-dots{
 .home{
     background: url("{{ site.baseurl }}/assets/home-bg.png");
     background: $primary;
+    min-height: calc(100vh - 160px);
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .specials{
@@ -1064,7 +1070,6 @@ background-repeat: repeat-x;
       animation: bounceOut 0.4s linear;
 }
   .intro-logo {
-  margin-top: 10.5rem;
       width: 511px;
 }
   .arrow-place:after {
@@ -1334,6 +1339,11 @@ position: relative;
 }
 
 @media (min-width:1400px){
+  .home{
+    padding-top: 105px;
+    padding-bottom: 105px;
+    min-height: calc(100vh - 205px);
+  }
   footer img {
     border-style: none;
     margin: 4rem 0 1.8rem;
@@ -1357,7 +1367,6 @@ position: relative;
     height: 105px;
   }
   .intro-logo {
-  margin-top: 15rem;
       width: 812px;
 }
   .arrow-place:after {
@@ -1410,7 +1419,7 @@ position: relative;
       font-size: 1.5rem;
   }
   .bottom-bar{
-    height: 100px;
+    height: 105px;
   }
   .social-desktop .fa-facebook-square, .social-desktop .fa-twitter {
     font-size: 2.6rem;

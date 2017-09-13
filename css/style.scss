@@ -24,7 +24,26 @@ $body: 'ABeeZee', sans-serif; */
 $headline: 'Knewave', cursive;
 $body: 'Patrick Hand', cursive;
 
+.site-nav-texture{
+    background-image: url("https://dl.dropboxusercontent.com/s/axayr0tlofpn1ge/site-nave-texture.png?dl=0") !important;
 
+}
+.slide-texture{
+    background-image: url("https://dl.dropboxusercontent.com/s/r6jx1f8s14rby0s/slide-texture.png?dl=0") !important;
+
+}
+.box-texture{
+      background-image: url("https://dl.dropboxusercontent.com/s/au8qs5w781khurl/box-texture.png?dl=0")!important;
+
+}
+.menu-nav-texture{
+      background-image: url("https://dl.dropboxusercontent.com/s/42w4p3sa73m45qu/menu-nav-texture.png?dl=0")!important;
+
+}
+.menu-texture{
+      background-image: url("https://dl.dropboxusercontent.com/s/bw2sxt7fjyqjx1r/menu-texture.png?dl=0")!important;
+
+}
 
 html{
   box-sizing: border-box;
@@ -181,14 +200,7 @@ ul{
   transform: translate3d(0,0,0) !important;
 }
 
-.grit-2{
-    background-image: url("https://dl.dropboxusercontent.com/s/94vqtxegxjzh0nn/trexture-3.png?dl=0");
 
-}
-.grit{
-    background-image: url("https://dl.dropboxusercontent.com/s/94vqtxegxjzh0nn/trexture-3.png?dl=0") !important;
-
-}
 .container{
 display: flex;
   align-items: center;
@@ -895,10 +907,7 @@ span.food-item-dots{
 .locations{
     background: $primary;
 }
-.grit-3{
-    background-image: url("https://dl.dropboxusercontent.com/s/94vqtxegxjzh0nn/trexture-3.png?dl=0");
 
-}
 .location-info{
   margin: 0 auto;
 }
@@ -952,9 +961,7 @@ span.food-item-dots{
       padding: 2rem 0;
       margin-top: 4.5rem;
       }
-    .grit-4{
-      background-image: url("https://dl.dropboxusercontent.com/s/94vqtxegxjzh0nn/trexture-3.png?dl=0");
-    }
+
     .specials-box h2{
       font-size: 4rem;
       margin-top: 0.6rem;
@@ -1058,6 +1065,7 @@ background-repeat: repeat-x;
   }
 }
 @media (min-width: 1024px){
+
   .menu-navigation span{
     display: block;
   }

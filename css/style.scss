@@ -25,24 +25,20 @@ $headline: 'Knewave', cursive;
 $body: 'Patrick Hand', cursive;
 
 .site-nav-texture{
-    background-image: url("https://dl.dropboxusercontent.com/s/axayr0tlofpn1ge/site-nave-texturet.png?dl=0") !important;
-
-}
-.slide-texture{
-    background-image: url("https://dl.dropboxusercontent.com/s/r6jx1f8s14rby0s/slide-texturet.png?dl=0") !important;
-
-}
-.box-texture{
-      background-image: url("https://dl.dropboxusercontent.com/s/au8qs5w781khurl/box-texturet.png?dl=0")!important;
+    background-image: url("../assets/horizontal_texture_top_mobile.jpg") !important;
 
 }
 .menu-nav-texture{
-      background-image: url("https://dl.dropboxusercontent.com/s/42w4p3sa73m45qu/menu-nav-texturet.png?dl=0")!important;
+        background-image: url("../assets/horizontal_texture_bottom_mobile.jpg") !important;
+}
+
+.box-texture{
+        background-image: url("../assets/vertical_texture.jpg") !important;
 
 }
+
 .menu-texture{
-      background-image: url("https://dl.dropboxusercontent.com/s/bw2sxt7fjyqjx1r/menu-texture-ARCH.png?dl=0")!important;
-	
+        background-image: url("../assets/vertical_texture.jpg") !important;
 
 }
 
@@ -343,12 +339,14 @@ display: flex;
     display: flex;
     width: 100%;
     background-color: #585858;
+      background-image: url("../assets/texture_menu_box_mobile.jpg") !important;
 }
 .locations{
 background-color: #585858;
     min-height: 100vh;
     display: flex;
     width: 100%;
+        background-image: url("../assets/texture_menu_box_mobile.jpg") !important;
 }
 
 
@@ -806,6 +804,14 @@ span.food-item-dots{
 }
 
 @media (min-width: 768px){
+  .site-nav-texture{
+      background-image: url("../assets/horizontal_texture_top_tablet.jpg") !important;
+
+  }
+  .menu-nav-texture{
+          background-image: url("../assets/horizontal_texture_bottom_tablet.jpg") !important;
+
+  }
   .info p{
     font-size: 1rem;
   }
@@ -903,7 +909,6 @@ span.food-item-dots{
 }
 
 .specials{
-    background: $primary;
 }
 .locations{
     background: $primary;
@@ -945,7 +950,6 @@ span.food-item-dots{
   .specials-box {
     display: flex;
     flex-direction: column;
-    background-color: $dark;
     width: 600px;
     padding: 2rem 0;
     margin: 4.5rem auto;
@@ -1066,7 +1070,14 @@ background-repeat: repeat-x;
   }
 }
 @media (min-width: 1024px){
+  .site-nav-texture{
+      background-image: url("../assets/horizontal_texture_top_laptop.jpg") !important;
 
+  }
+  .menu-nav-texture{
+          background-image: url("../assets/horizontal_texture_bottom_laptop.jpg") !important;
+
+  }
   .menu-navigation span{
     display: block;
   }
@@ -1194,6 +1205,7 @@ position: relative;
       right: 0;
       top: 0;
       box-shadow: 0 2px 45px rgba(0,0,0,1);
+      background-image: url("../assets/vertical_texture.jpg") !important;
     }
     .locations-box{
       position: absolute;
@@ -1249,6 +1261,9 @@ position: relative;
     .food-item-description{
     font-size: 0.9rem;
     line-height: 48px;
+  }
+    .specials{
+      background-image: url("../assets/vertical_texture_slide.jpg") !important;
     }
 }
 @media (min-width: 1200px){
@@ -1348,6 +1363,14 @@ position: relative;
 }
 
 @media (min-width:1400px){
+  .site-nav-texture{
+      background-image: url("../assets/horizontal_texture_top.jpg") !important;
+
+  }
+  .menu-nav-texture{
+          background-image: url("../assets/horizontal_texture_bottom.jpg") !important;
+
+  }
   .home{
     padding-top: 105px;
     padding-bottom: 105px;

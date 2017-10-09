@@ -24,6 +24,13 @@ $body: 'ABeeZee', sans-serif; */
 $headline: 'Knewave', cursive;
 $body: 'Patrick Hand', cursive;
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slide-texture{
+    background-image: url("../assets/vertical_texture_slide.jpg") !important;
+}
 .site-nav-texture{
     background-image: url("../assets/horizontal_texture_top_mobile.jpg") !important;
 
@@ -43,6 +50,8 @@ $body: 'Patrick Hand', cursive;
 }
 
 html{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   line-height: 21px;
   letter-spacing: 1px;
@@ -50,6 +59,7 @@ html{
 
 }
 body{
+   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -1206,6 +1216,7 @@ position: relative;
       top: 0;
       box-shadow: 0 2px 45px rgba(0,0,0,1);
       background-image: url("../assets/vertical_texture.jpg") !important;
+      background: #1e1e1e;
     }
     .locations-box{
       position: absolute;
@@ -1264,6 +1275,7 @@ position: relative;
   }
     .specials{
       background-image: url("../assets/vertical_texture_slide.jpg") !important;
+      background-color: #f12d2d;
     }
 }
 @media (min-width: 1200px){

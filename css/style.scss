@@ -28,6 +28,12 @@ $body: 'Patrick Hand', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.menu:before {
+    /* border: 6px solid #9f2828; */
+    width: 100%;
+    height: 5px;
+    background-image: url("{{site.baseurl}}/assets/bar-shadow.png");
+}
 .slide-texture{
     background-image: url("../assets/vertical_texture_slide.jpg") !important;
 }
@@ -170,7 +176,7 @@ nav.sticky {
 .menu:before{
   content: "";
   display: table;
-  height: 20px;
+  height: 10px;
 }
 header{
   position: relative;
@@ -205,6 +211,7 @@ ul{
   height: 60px;
   display: flex;
   transform: translate3d(0,0,0) !important;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -449,6 +456,7 @@ display: none;
   flex: 1;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .menu-navigation a{
   padding: 0rem 1rem;
@@ -726,8 +734,7 @@ span.food-item-dots{
     color: $light;
     font-size: 0.8rem;
   }
-  .bottom-bar{
-  }
+
   .main-navigation a{
     padding: 1rem 1.2rem;
   }

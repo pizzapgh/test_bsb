@@ -18,7 +18,7 @@ layout: default
       <h2>Specials</h2>
       <ul class="specials-button-area button-area">
         {% for fart in site.categories.specials-collect %}
-        <li><a href="{{ site.baseurl }}{{ fart.url }}">{{fart.title}}</a></li>
+             <li><a href="{{site.baseurl}}{{fart.url}}"{% if page.url contains post.slug %}poop{% endif %}>{{fart.title}}</a></li>
         {% endfor %}
       </ul>
         {{ content }}

@@ -28,6 +28,10 @@ $body: 'Patrick Hand', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.poop{
+  background: blue;
+  border: 20px solid blue !important;
+}
 .menu:before {
     /* border: 6px solid #9f2828; */
     width: 100%;
@@ -127,7 +131,8 @@ display: none;
   display: block;
 }
 .logo img{
-  width: 47px;
+  width: 66px;
+margin-right: 1rem;
 }
 a{
   text-decoration: none;
@@ -196,7 +201,7 @@ ul{
   top: 0;
   left: 0;
   right: 0;
-  z-index: 5;
+  z-index: 10;
   transform: translate3d(0,0,0) !important;
   display: flex;
   align-items: center;
@@ -265,7 +270,8 @@ display: flex;
 .main-navigation{
   display: flex;
   flex: 1;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 .main-navigation a{
   font-family: $headline;
@@ -281,35 +287,42 @@ display: flex;
 .fa-navicon{
   color: $secondary;
 }
-#toggle{
-  display: none;
-}
 .toggle-navigation-drop{
-  position: absolute;
-  top: 52px;
-  left: 0;
-  right: 0;
-  background: $secondary;
+  color:#FFF;
   display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 147px;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 1;
+   animation: fart ease-in 1;
 }
-#toggle:checked + .toggle-navigation-drop{
-  display: block;
+.mobile-button{
+  color: $secondary;
 }
 .toggle-flex{
   display: flex;
   margin: auto;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
+
 .toggle-specials{
   font-family: $headline;
   margin-right: 1rem;
   text-align: center;
+  margin: auto;
 }
 .toggle-social{
 display: flex;
   justify-content: space-around;
   flex: 0.5;
   margin: auto;
+  align-items: center;
+      height: 75px;
 }
 .toggle-specials a{
     color: $light;
@@ -319,12 +332,15 @@ display: flex;
 }
 .box-1{
   flex:1;
-  background: $primary;
+  background: #e82728;
+  display: flex;
+  opacity: .9;
 }
 .box-2{
   flex: 1;
   display: flex;
   background: $secondary;
+    opacity: .9;
 }
 .social-desktop{
   display: none;
@@ -819,8 +835,18 @@ span.food-item-dots{
   margin-bottom: 0;
   }
 }
-
+@media (min-width: 425px) {
+  .logo img{
+        margin-right: 1.5rem;
+  }
+}
 @media (min-width: 768px){
+  .toggle-navigation-drop{
+    top: 80px;
+  }
+  .logo img {
+    margin-right: 6rem;
+}
   .site-nav-texture{
       background-image: url("../assets/horizontal_texture_top_tablet.jpg") !important;
 
@@ -843,6 +869,7 @@ span.food-item-dots{
   }
   .logo img{
     width: 88px;
+    margin-right: 1.2;
   }
   .main-navigation a{
     padding: 1rem 1.9rem;
@@ -897,9 +924,6 @@ span.food-item-dots{
   .fa-navicon{
     font-size: 3.4rem;
   }
-  .toggle-navigation-drop{
-      top: 74px;
-    }
 .main-navigation a{
   font-size: 2rem;
 }
@@ -1087,6 +1111,15 @@ background-repeat: repeat-x;
   }
 }
 @media (min-width: 1024px){
+  .main-navigation{
+    justify-content: center;
+  }
+  .logo img{
+    margin-right: 0;
+  }
+  .mobile-button{
+    display: none;
+  }
   .site-nav-texture{
       background-image: url("../assets/horizontal_texture_top_laptop.jpg") !important;
 
@@ -1198,9 +1231,6 @@ position: relative;
   }
   .social-desktop{
     display: flex;
-  }
-  .toggle-navigation-drop{
-    display: none;
   }
 
   /* site-navigation
@@ -1567,4 +1597,14 @@ margin-top: 4.5rem
   .food-item-description{
   font-size: 1.2rem;
   }
+}
+.button-color{
+  background-color: $secondary !important;
+}
+.lbj{
+  background-color: green;
+  padding: 5rem;
+  border: 20px solid blue !important;
+  margin-top:20rem;
+  font-size: 20rem;
 }

@@ -4,6 +4,11 @@ $(document).ready(function() {
     $("#southside-info, #carnegie-info, #aliquippa-info, #beechview-info, #weirton-info, #coraopolis-info, #midland-info").hide();
 });
 
+var addclass = 'button-color';
+var $cols = $('.button-color-change').click(function(e) {
+    $cols.removeClass(addclass);
+    $(this).addClass(addclass);
+});
 
 $("#link-avalon").on('click', function() {
     $("#avalon-info").show();
@@ -46,17 +51,19 @@ $(".button-area li").on('click', function() {
 
 // buttons for locations
 
-var animationEvent =
+// var animationEvent =
     "webkitAnimationEnd oanimationend msAnimationEnd animationend";
-$("#bounce").click(function() {
-  $("#logo").addClass("bounce");
-  $("#logo").one(animationEvent, function(event) {
-    $("#logo").removeClass("bounce");
-  });
+// $("#bounce").click(function() {
+//  $("#logo").addClass("bounce");
+//  $("#logo").one(animationEvent, function(event) {
+//    $("#logo").removeClass("bounce");
+//  });
   // add animation class on every click
-});
+// });
 
-
+$(".mobile-button").click(function() {
+   $(".toggle-navigation-drop").fadeToggle("slow");
+ });
 
 $(document).ready(function(){
 	$('a[href*="#"]').on('click', function (e) {

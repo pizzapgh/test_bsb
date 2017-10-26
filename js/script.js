@@ -4,10 +4,16 @@ $(document).ready(function() {
     $("#southside-info, #carnegie-info, #aliquippa-info, #beechview-info, #weirton-info, #coraopolis-info, #midland-info").hide();
 });
 
-var addclass = 'button-color';
-var $cols = $('.button-color-change').click(function(e) {
-    $cols.removeClass(addclass);
+var addclass = 'button-color-locations';
+var $locations = $('.button-color-change-locations').click(function(e) {
+    $locations.removeClass(addclass);
     $(this).addClass(addclass);
+});
+
+var addmenu = 'button-color-menu';
+var $menu = $('.button-color-change-menu').click(function(e) {
+    $menu.removeClass(addmenu);
+    $(this).addClass(addmenu);
 });
 
 $("#link-avalon").on('click', function() {
@@ -52,7 +58,7 @@ $(".button-area li").on('click', function() {
 // buttons for locations
 
 // var animationEvent =
-    "webkitAnimationEnd oanimationend msAnimationEnd animationend";
+//    "webkitAnimationEnd oanimationend msAnimationEnd animationend";
 // $("#bounce").click(function() {
 //  $("#logo").addClass("bounce");
 //  $("#logo").one(animationEvent, function(event) {
@@ -72,6 +78,7 @@ $(document).ready(function(){
 		$('html, body').animate({
 			scrollTop: $($(this).attr('href')).offset().top
 		}, 500, 'linear');
+
 	});
 
   // Even when the window is resized, run this code.
@@ -542,7 +549,8 @@ function initialize() {
         overviewMapControl: false,
         rotateControl: true,
         scrollwheel: false,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        backgroundColor: '#f12d2d'
     };
     map = new google.maps.Map(document.getElementById("map_canvas"), mapProp);
 

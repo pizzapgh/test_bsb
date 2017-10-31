@@ -908,6 +908,7 @@ span.food-item-dots{
 @media (min-width: 768px){
   .toggle-navigation-drop{
     top: 80px;
+    height: 80px;
   }
   .logo img {
     margin-right: 6rem;
@@ -1000,6 +1001,12 @@ span.food-item-dots{
   .toggle-specials li{
     font-size: 2.5rem;
   }
+  .toggle-specials li a{
+    font-size: 1.5rem;
+  }
+.fa-twitter:before, .fa-facebook-square:before{
+    font-size: 3rem;
+  }
   .box-2,
   .box-1{
     padding: 1rem 0;
@@ -1024,6 +1031,7 @@ span.food-item-dots{
 
 .location-info{
   margin: 0 auto;
+    width: 500px;
 }
   /* site-navigation
   -----------------------*/
@@ -1061,6 +1069,9 @@ span.food-item-dots{
     width: 600px;
     padding: 2rem 0;
     margin: 4.5rem auto;
+    background-color: $dark;
+    background-image: url(../assets/vertical_texture.jpg) !important;
+    box-shadow: 0 2px 25px black;
     }
 
     /* location-slide
@@ -1181,6 +1192,9 @@ background-repeat: repeat-x;
   }
 }
 @media (min-width: 1024px){
+   .fa-facebook-square:before, .fa-twitter:before{
+     font-size: 2rem;
+   }
   .locations{
     background-image: none !important;
     background-color: #f12d2d;
@@ -1196,10 +1210,6 @@ background-repeat: repeat-x;
   }
   .site-nav-texture{
       background-image: url("../assets/horizontal_texture_top_laptop.jpg") !important;
-
-  }
-  .menu-nav-texture{
-          background-image: url("../assets/horizontal_texture_bottom_laptop.jpg") !important;
 
   }
   .menu-navigation span{
@@ -1331,7 +1341,6 @@ position: relative;
       top: 0;
       box-shadow: 0 2px 45px rgba(0,0,0,1);
       background-image: url("../assets/vertical_texture.jpg") !important;
-      background: #1e1e1e;
     }
     .locations-box{
       position: absolute;
@@ -1483,6 +1492,9 @@ position: relative;
 
 
 @media (min-width:1400px){
+  .fa-facebook-square:before, .fa-twitter:before{
+    font-size: 3rem;
+  }
   .site-nav-texture{
       background-image: url("../assets/horizontal_texture_top.jpg") !important;
 
@@ -1773,5 +1785,8 @@ line-height: 40px;
     }
     nav.sticky {
     top: 84px;
+  }
+  .location-info{
+    width: 500px;
   }
 }

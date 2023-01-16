@@ -236,12 +236,12 @@ display: flex;
   margin: auto;
 }
 .intro-logo{
-    animation: fadein 4s;
+    animation: fadein 5s;
     width: 245px;
     align-self: center;
 }
 .bounce{
-  animation: bounceOut 0.4s linear;
+  animation: bounceOut 0.5s linear;
 }
 @keyframes fadein {
     from {
